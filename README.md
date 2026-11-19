@@ -13,7 +13,9 @@
 Bento turns a fresh Windows 11 PC into a quiet, monochrome desktop: a floating [YASB](https://github.com/amnweb/yasb) bar, [komorebi](https://github.com/LGUG2Z/komorebi) tiling,
 and **Lucent**, a one-switch accent colour that follows your wallpaper into the programs you use. One installer, a settings app, no config files to edit by hand.
 
-## Install
+<p align="center"><img src="assets/bento-grid.svg" alt="YASB bar, komorebi, Lucent, Bento Settings, game mode and the Rainmeter widget" width="100%"></p>
+
+<img src="assets/h-install.svg" alt="Install" width="100%">
 
 In a normal (not administrator) PowerShell:
 
@@ -48,7 +50,11 @@ cd bento
 | **Rainmeter widget** | A clock, calendar, seconds and uptime tiles, in the same style. |
 | **Extras** | Tacky Borders, AltSnap, fastfetch, Spicetify, Windhawk, six original wallpapers. |
 
-## Lucent: supported programs
+<img src="assets/h-lucent.svg" alt="Lucent" width="100%">
+
+<img src="assets/lucent-strip.svg" alt="Zed, Discord, Zen, Helium, Obsidian, Terminal, File Pilot, Tacky Borders, Rainmeter, Spotify, OBS" width="100%">
+
+### Supported programs
 
 Switch Lucent on, pick an accent (or let it follow Windows), press **Apply now**. These are updated, and each has its own accent or monochrome tone.
 
@@ -69,7 +75,7 @@ Switch Lucent on, pick an accent (or let it follow Windows), press **Apply now**
 
 More detail and per-program notes: the [docs](https://programmermansudjo.github.io/bento/lucent.html).
 
-## Stand on good shoulders
+<img src="assets/h-credits.svg" alt="Credits" width="100%">
 
 Bento is a layer of configuration and a small settings app on top of other people's work. It would not exist without them, and they deserve your support:
 
@@ -81,7 +87,9 @@ Bento is a layer of configuration and a small settings app on top of other peopl
 Star them, sponsor them, read their licences. **They have their own licences, and Bento does not change them**: komorebi in particular is not under a standard open-source licence,
 so check its terms before using it commercially.
 
-## Licence
+<img src="assets/divider.svg" alt="" width="100%">
+
+### Licence
 
 Bento itself (the installer, the settings app, the configuration, the Rainmeter skin and the wallpapers) is released under the [MIT licence](LICENSE): use it, change it, share it.
 The fonts in the Rainmeter skin and the settings app (Geist, Geist Mono Nerd Font) keep their own open licences (SIL OFL).
