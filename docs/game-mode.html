@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Game mode - Bento</title><meta name="description" content="Game mode switches hotkeys, the bar and tiling off while a game runs, and back on after.">
+<meta property="og:title" content="Game mode - Bento"><meta property="og:description" content="Game mode switches hotkeys, the bar and tiling off while a game runs, and back on after.">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230a0a0a'/%3E%3Ccircle cx='10' cy='10' r='3' fill='%23fff'/%3E%3Ccircle cx='22' cy='10' r='3' fill='%23fff' opacity='.4'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%23c9ab9b'/%3E%3Ccircle cx='10' cy='22' r='3' fill='%23fff' opacity='.4'/%3E%3Ccircle cx='22' cy='22' r='3' fill='%23fff'/%3E%3C/svg%3E">
+</head><body>
+<header class="top"><a class="brand" href="index.html"><i><b></b><b></b><b></b><b></b><b></b><b></b></i>BENTO</a>
+<nav><a href="install.html">Install</a><a href="lucent.html">Lucent</a><a href="credits.html">Credits</a><a href="https://github.com/ProgrammerManSudjo/bento">GitHub</a></nav></header>
+<div class="wrap"><aside class="side"><h4>Start</h4><a href="index.html">Overview</a><a href="install.html">Install</a><h4>Use</h4><a href="lucent.html">Lucent</a><a href="settings.html">Settings app</a><a href="shortcuts.html">Shortcuts</a><a href="game-mode.html" class=on>Game mode</a><h4>Extras</h4><a href="windhawk.html">Windhawk</a><a href="credits.html">Credits and licences</a></aside><main>
+<div class="kicker">Use</div><h1>Game mode</h1>
+<p class="lead">Hotkeys and mouse tricks are great until a game fights over them. Game mode switches them all off while a game runs, and back on after.</p>
+<h2>What it turns off</h2>
+<ul><li>The scroll hotkeys (the AutoHotkey script).</li><li>komorebi and whkd (stopped, which gives windows back).</li><li>The YASB bar.</li><li>AltSnap, if you have it.</li><li>The taskbar is set to auto-hide.</li></ul>
+<p>Afterwards only what it switched off itself is switched back on, in the right order, so a taskbar you already had on auto-hide stays that way.</p>
+<h2>Two ways it starts</h2>
+<h3>Automatic: fullscreen</h3>
+<p>The scroll script asks Windows every couple of seconds whether a fullscreen app is in front (this also catches borderless games). Two checks in a row switch game mode on. It then stays on until the game's own process has closed, so alt-tabbing out of a game does not bring everything back. Browsers and media players are ignored.</p>
+<h3>Exact: Playnite</h3>
+<p>If you start your games from <a href="https://playnite.link">Playnite</a>, use its global scripts. In Playnite's settings, under Scripting:</p>
+<table><tr><th>Field</th><th>Script</th></tr>
+<tr><td>Before starting a game</td><td><code>&amp; powershell.exe -NoProfile -WindowStyle Hidden -File "$env:USERPROFILE\.config\komorebi\game-mode.ps1" on</code></td></tr>
+<tr><td>After exiting a game</td><td><code>&amp; powershell.exe -NoProfile -WindowStyle Hidden -File "$env:USERPROFILE\.config\komorebi\game-mode.ps1" off</code></td></tr></table>
+<p><code>game-mode.ps1</code> only leaves "on" or "off" in a small file; the script picks it up within two seconds.</p>
+<h2>By hand</h2>
+<p>The scroll script's tray icon has <b>Game mode now</b> and <b>Game mode (automatic)</b>. What it did is written to <code>%APPDATA%\game-mode.log</code>.</p>
+
+<div class="foot">Bento is MIT licensed. komorebi, YASB and the other projects it builds on have their own licences: <a href="credits.html">credits and licences</a>.</div></main></div>
+<script src="assets/site.js"></script></body></html>

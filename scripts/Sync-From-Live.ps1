@@ -41,6 +41,11 @@ $k = ($kj | ConvertTo-Json -Depth 40)
 Write-Text (Join-Path $repo 'config\komorebi\komorebi.json') $k
 foreach ($f in 'applications.json', 'komorebi-scroll.ahk', 'game-mode.ps1') { Copy-Clean (Join-Path $cfg "komorebi\$f") (Join-Path $repo "config\komorebi\$f") }
 Copy-Clean (Join-Path $cfg 'whkdrc') (Join-Path $repo 'config\whkdrc')
+# whkd: Windows PowerShell exists on every PC (pwsh does not), and personal script bindings (a path on one person's drive) stay out
+$wh = [System.IO.File]::ReadAllText((Join-Path $repo 'config\whkdrc'))
+$wh = [regex]::Replace($wh, '(?m)^\.shell\s+pwsh\s*$', '.shell powershell')
+$wh = [regex]::Replace($wh, '(?m)^[^#\r\n]*(?:[A-Za-z]:\\|\\\\)[^\r\n]*\r?\n', '')
+Write-Text (Join-Path $repo 'config\whkdrc') $wh
 
 # --- Tacky Borders ---
 Copy-Clean (Join-Path $cfg 'tacky-borders\config.yaml') (Join-Path $repo 'config\tacky-borders\config.yaml')

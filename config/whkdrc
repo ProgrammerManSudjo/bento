@@ -1,5 +1,4 @@
-.shell pwsh
-
+.shell powershell
 # ================================================================
 # Configuration Reload
 # ================================================================
@@ -29,7 +28,6 @@ lwin + return              : wt.exe
 # ================================================================
 alt + q                    : komorebic close
 lwin + w                   : komorebic close
-alt + shift + u            : pwsh -WindowStyle Hidden -File "D:\Documents\Scripts\toggle.ps1"
 alt + f                    : komorebic maximize
 alt + m                    : komorebic minimize
 alt + t                    : komorebic toggle-float

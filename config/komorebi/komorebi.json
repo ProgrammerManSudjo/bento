@@ -1,163 +1,163 @@
 {
-    "$schema":  "https://raw.githubusercontent.com/LGUG2Z/komorebi/v0.1.41/schema.json",
-    "app_specific_configuration_path":  "$Env:KOMOREBI_CONFIG_HOME/applications.json",
-    "window_hiding_behaviour":  "Cloak",
-    "cross_monitor_move_behaviour":  "Insert",
-    "default_workspace_padding":  10,
-    "default_container_padding":  5,
-    "float_rule_placement":  "Center",
-    "mouse_follows_focus":  true,
-    "border":  false,
-    "border_width":  2,
-    "border_offset":  -1,
-    "transparency":  false,
-    "transparency_alpha":  245,
-    "transparency_ignore_rules":  [
-                                      {
-                                          "kind":  "Title",
-                                          "id":  "YouTube",
-                                          "matching_strategy":  "Contains"
-                                      },
-                                      {
-                                          "kind":  "Exe",
-                                          "id":  "obs64.exe",
-                                          "matching_strategy":  "Equals"
-                                      }
-                                  ],
-    "animation":  {
-                      "enabled":  false,
-                      "duration":  350,
-                      "fps":  165,
-                      "style":  "EaseOutCubic"
-                  },
-    "stackbar":  {
-                     "height":  30,
-                     "mode":  "Never",
-                     "label":  "Process",
-                     "tabs":  {
-                                  "width":  150,
-                                  "focused_text":  "#ffffff",
-                                  "unfocused_text":  "#6b6b70",
-                                  "background":  "#161618"
-                              }
-                 },
-    "monitors":  [
-                     {
-                         "workspaces":  [
-                                            {
-                                                "name":  ""
-                                            },
-                                            {
-                                                "name":  "",
-                                                "layout":  "BSP"
-                                            },
-                                            {
-                                                "name":  "",
-                                                "layout":  "BSP"
-                                            },
-                                            {
-                                                "name":  "",
-                                                "layout":  "BSP"
-                                            },
-                                            {
-                                                "name":  "",
-                                                "layout":  "BSP"
-                                            }
-                                        ]
-                     },
-                     {
-                         "workspaces":  [
-                                            {
-                                                "name":  "",
-                                                "layout":  "Rows"
-                                            },
-                                            {
-                                                "name":  "",
-                                                "layout":  "Rows"
-                                            },
-                                            {
-                                                "name":  "",
-                                                "layout":  "Rows"
-                                            },
-                                            {
-                                                "name":  "",
-                                                "layout":  "Rows"
-                                            },
-                                            {
-                                                "name":  "",
-                                                "layout":  "Rows"
-                                            }
-                                        ]
-                     },
-                     {
-                         "workspaces":  [
-                                            {
-                                                "name":  ""
-                                            },
-                                            {
-                                                "name":  "",
-                                                "layout_rules":  {
-                                                                     "1":  "BSP",
-                                                                     "4":  "Grid"
-                                                                 }
-                                            },
-                                            {
-                                                "name":  "",
-                                                "layout_rules":  {
-                                                                     "1":  "BSP",
-                                                                     "4":  "Grid"
-                                                                 }
-                                            },
-                                            {
-                                                "name":  "",
-                                                "layout_rules":  {
-                                                                     "1":  "BSP",
-                                                                     "4":  "Grid"
-                                                                 }
-                                            },
-                                            {
-                                                "name":  "",
-                                                "layout_rules":  {
-                                                                     "1":  "BSP",
-                                                                     "4":  "Grid"
-                                                                 }
-                                            }
-                                        ]
-                     },
-                     {
-                         "workspaces":  [
-                                            {
-                                                "name":  ""
-                                            },
-                                            {
-                                                "name":  "",
-                                                "layout_rules":  {
-                                                                     "1":  "BSP",
-                                                                     "4":  "Grid"
-                                                                 }
-                                            },
-                                            {
-                                                "name":  "",
-                                                "layout_rules":  {
-                                                                     "1":  "BSP",
-                                                                     "4":  "Grid"
-                                                                 }
-                                            },
-                                            {
-                                                "name":  "",
-                                                "layout_rules":  {
-                                                                     "1":  "BSP",
-                                                                     "4":  "Grid"
-                                                                 }
-                                            },
-                                            {
-                                                "name":  "",
-                                                "layout_rules":  {
-                                                                     "1":  "BSP",
-                                                                     "4":  "Grid"
-                                                                 }
-                                            }
-                                        ]
-                     }
-                 ]
+  "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/v0.1.41/schema.json",
+  "app_specific_configuration_path": "$Env:KOMOREBI_CONFIG_HOME/applications.json",
+  "window_hiding_behaviour": "Cloak",
+  "cross_monitor_move_behaviour": "Insert",
+  "default_workspace_padding": 10,
+  "default_container_padding": 5,
+  "float_rule_placement": "Center",
+  "mouse_follows_focus": true,
+  "border": false,
+  "border_width": 2,
+  "border_offset": -1,
+  "transparency": false,
+  "transparency_alpha": 245,
+  "transparency_ignore_rules": [
+    {
+      "kind": "Title",
+      "id": "YouTube",
+      "matching_strategy": "Contains"
+    },
+    {
+      "kind": "Exe",
+      "id": "obs64.exe",
+      "matching_strategy": "Equals"
+    }
+  ],
+  "animation": {
+    "enabled": false,
+    "duration": 350,
+    "fps": 165,
+    "style": "EaseOutCubic"
+  },
+  "stackbar": {
+    "height": 30,
+    "mode": "Never",
+    "label": "Process",
+    "tabs": {
+      "width": 150,
+      "focused_text": "#ffffff",
+      "unfocused_text": "#6b6b70",
+      "background": "#161618"
+    }
+  },
+  "monitors": [
+    {
+      "workspaces": [
+        {
+          "name": ""
+        },
+        {
+          "name": "",
+          "layout": "BSP"
+        },
+        {
+          "name": "",
+          "layout": "BSP"
+        },
+        {
+          "name": "",
+          "layout": "BSP"
+        },
+        {
+          "name": "",
+          "layout": "BSP"
+        }
+      ]
+    },
+    {
+      "workspaces": [
+        {
+          "name": "",
+          "layout": "Rows"
+        },
+        {
+          "name": "",
+          "layout": "Rows"
+        },
+        {
+          "name": "",
+          "layout": "Rows"
+        },
+        {
+          "name": "",
+          "layout": "Rows"
+        },
+        {
+          "name": "",
+          "layout": "Rows"
+        }
+      ]
+    },
+    {
+      "workspaces": [
+        {
+          "name": ""
+        },
+        {
+          "name": "",
+          "layout_rules": {
+            "1": "BSP",
+            "4": "Grid"
+          }
+        },
+        {
+          "name": "",
+          "layout_rules": {
+            "1": "BSP",
+            "4": "Grid"
+          }
+        },
+        {
+          "name": "",
+          "layout_rules": {
+            "1": "BSP",
+            "4": "Grid"
+          }
+        },
+        {
+          "name": "",
+          "layout_rules": {
+            "1": "BSP",
+            "4": "Grid"
+          }
+        }
+      ]
+    },
+    {
+      "workspaces": [
+        {
+          "name": ""
+        },
+        {
+          "name": "",
+          "layout_rules": {
+            "1": "BSP",
+            "4": "Grid"
+          }
+        },
+        {
+          "name": "",
+          "layout_rules": {
+            "1": "BSP",
+            "4": "Grid"
+          }
+        },
+        {
+          "name": "",
+          "layout_rules": {
+            "1": "BSP",
+            "4": "Grid"
+          }
+        },
+        {
+          "name": "",
+          "layout_rules": {
+            "1": "BSP",
+            "4": "Grid"
+          }
+        }
+      ]
+    }
+  ]
 }
