@@ -1,0 +1,30 @@
+{
+ "colors": {
+  "text": "mix(l3, #ffffff, .5)",
+  "subtext": "gray 72",
+  "main": "t .06",
+  "main-elevated": "t .10",
+  "main-transition": "t .045",
+  "highlight": "t .14",
+  "highlight-elevated": "t .11",
+  "sidebar": "t .045",
+  "player": "t .035",
+  "card": "t .035",
+  "shadow": "t .045",
+  "selected-row": "l3",
+  "button": "acc",
+  "button-active": "l1",
+  "button-disabled": "d2",
+  "tab-active": "t .045",
+  "notification": "acc",
+  "notification-error": "#d25050",
+  "misc": "#000000",
+  "play-button": "acc",
+  "play-button-active": "l1",
+  "progress-fg": "l1",
+  "progress-bg": "t .22",
+  "heart": "#d25050",
+  "pagelink-active": "l1",
+  "radio-btn-active": "acc"
+ }
+}

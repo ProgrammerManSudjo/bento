@@ -1,0 +1,17 @@
+/* The accent colours of the bar (monochrome). */
+:root {
+    --yasb-accent: rgb(119, 119, 119);
+    --yasb-accent-rgb: 119, 119, 119;
+    --yasb-accent-dark1: rgb(94, 94, 94);
+    --yasb-accent-dark1-rgb: 94, 94, 94;
+    --yasb-accent-dark2: rgb(59, 59, 59);
+    --yasb-accent-dark2-rgb: 59, 59, 59;
+    --yasb-accent-dark3: rgb(27, 27, 27);
+    --yasb-accent-dark3-rgb: 27, 27, 27;
+    --yasb-accent-light1: rgb(145, 145, 145);
+    --yasb-accent-light1-rgb: 145, 145, 145;
+    --yasb-accent-light2: rgb(198, 198, 198);
+    --yasb-accent-light2-rgb: 198, 198, 198;
+    --yasb-accent-light3: rgb(226, 226, 226);
+    --yasb-accent-light3-rgb: 226, 226, 226;
+}

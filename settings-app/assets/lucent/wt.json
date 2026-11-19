@@ -1,0 +1,27 @@
+{
+ "schemes": [
+  {
+   "name": "YASB Accent",
+   "background": "t 0.05",
+   "foreground": "l3",
+   "cursorColor": "l1",
+   "selectionBackground": "t 0.35",
+   "black": "t 0.12",
+   "white": "gray 80",
+   "brightBlack": "gray 40",
+   "brightWhite": "gray 95",
+   "red": "ansi 0",
+   "brightRed": "bright 0",
+   "green": "ansi 1",
+   "brightGreen": "bright 1",
+   "yellow": "ansi 2",
+   "brightYellow": "bright 2",
+   "blue": "ansi 3",
+   "brightBlue": "bright 3",
+   "purple": "ansi 4",
+   "brightPurple": "bright 4",
+   "cyan": "ansi 5",
+   "brightCyan": "bright 5"
+  }
+ ]
+}

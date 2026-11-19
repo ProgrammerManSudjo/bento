@@ -1,0 +1,23 @@
+
+/* The icons. The browser sets its icon colour again on the toolbars and on the buttons, so the value at the top is not enough: it is set
+   on the toolbars, the buttons, panels and menus, and the icon images get the colour themselves (an icon takes it from fill / stroke
+   through -moz-context-properties, which has to be on the image; outline icons also follow the button's text colour). */
+toolbar, toolbarbutton, #navigator-toolbox, #zen-sidebar-top-buttons, #zen-sidebar-bottom-buttons, panel, menupopup {
+    --toolbarbutton-icon-fill: {{icon}} !important;
+    --lwt-toolbarbutton-icon-fill: {{icon}} !important;
+    --toolbarbutton-icon-fill-attention: {{attention}} !important;
+    --lwt-toolbarbutton-icon-fill-attention: {{attention}} !important;
+}
+{{button_selectors}} {
+    color: {{icon}} !important;
+}
+{{image_selectors}} {
+    fill: {{icon}} !important;
+    stroke: {{icon}} !important;
+    -moz-context-properties: fill, fill-opacity, stroke, stroke-opacity !important;
+}
+/* And, as the sure way: the built-in buttons are recoloured as pictures (this works however the browser draws the icon). Extension buttons
+   keep their own colours. */
+{{filter_selectors}} {
+    filter: {{filter}} !important;
+}

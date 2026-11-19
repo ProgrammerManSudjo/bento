@@ -1,0 +1,44 @@
+name: release
+
+# Pushing a tag such as v1.0.0 builds the settings app, packs the installer, and publishes both on a GitHub release.
+# install.ps1 downloads bento.zip (the package) and bento-settings.exe from the latest release.
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+
+jobs:
+  release:
+    runs-on: windows-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: x86_64-pc-windows-msvc
+
+      - name: Build the settings app
+        working-directory: settings-app
+        run: cargo build --release --target x86_64-pc-windows-msvc
+
+      - name: Pack
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force dist/bento | Out-Null
+          Copy-Item settings-app/target/x86_64-pc-windows-msvc/release/yasb-settings.exe dist/bento-settings.exe
+          foreach ($i in 'install.ps1', 'LICENSE', 'README.md', 'scripts', 'config', 'rainmeter', 'wallpapers') {
+            Copy-Item $i dist/bento -Recurse -Force
+          }
+          Copy-Item dist/bento-settings.exe dist/bento/bento-settings.exe
+          Compress-Archive -Path dist/bento -DestinationPath dist/bento.zip -Force
+
+      - name: Publish
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          generate_release_notes: true
+          files: |
+            dist/bento.zip
+            dist/bento-settings.exe

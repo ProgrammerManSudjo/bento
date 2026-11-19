@@ -1,0 +1,198 @@
+{
+ "$schema": "https://zed.dev/schema/themes/v0.2.0.json",
+ "name": "YASB Accent",
+ "author": "theme.py",
+ "themes": [
+  {
+   "name": "YASB Accent",
+   "appearance": "dark",
+   "style": {
+    "background": "= t 0.07",
+    "background.appearance": "opaque",
+    "surface.background": "= t 0.08",
+    "elevated_surface.background": "= t 0.11",
+    "border": "= t 0.32",
+    "border.variant": "= t 0.2",
+    "border.focused": "= acc",
+    "border.selected": "= l1",
+    "border.transparent": "#00000000",
+    "element.background": "= t 0.22",
+    "element.hover": "= t 0.35",
+    "element.active": "= t 0.45",
+    "element.selected": "= l1 @ 0.24",
+    "ghost_element.background": "#00000000",
+    "ghost_element.hover": "= t 0.2",
+    "ghost_element.active": "= t 0.3",
+    "ghost_element.selected": "= l1 @ 0.2",
+    "text": "#ffffff",
+    "text.muted": "#bfbfbf",
+    "text.placeholder": "#8c8c8c",
+    "text.disabled": "#6b6b6b",
+    "text.accent": "= l1",
+    "icon": "#ffffff",
+    "icon.muted": "#bfbfbf",
+    "icon.disabled": "#6b6b6b",
+    "icon.accent": "= l1",
+    "status_bar.background": "= t 0.12",
+    "title_bar.background": "= t 0.16",
+    "title_bar.inactive_background": "= t 0.1",
+    "toolbar.background": "= t 0.05",
+    "tab_bar.background": "= t 0.1",
+    "tab.inactive_background": "= t 0.1",
+    "tab.active_background": "= t 0.2",
+    "panel.background": "= t 0.08",
+    "panel.focused_border": "= acc",
+    "search.match_background": "= l1 @ 0.3",
+    "scrollbar.thumb.background": "= l1 @ 0.25",
+    "scrollbar.thumb.hover_background": "= l1 @ 0.4",
+    "editor.foreground": "#ffffff",
+    "editor.background": "= t 0.05",
+    "editor.gutter.background": "= t 0.05",
+    "editor.active_line.background": "= l1 @ 0.1",
+    "editor.highlighted_line.background": "= l1 @ 0.14",
+    "editor.line_number": "#8c8c8c",
+    "editor.active_line_number": "#e6e6e6",
+    "editor.wrap_guide": "= l1 @ 0.12",
+    "editor.active_wrap_guide": "= l1 @ 0.25",
+    "editor.indent_guide": "= l1 @ 0.1",
+    "editor.indent_guide_active": "= l1 @ 0.3",
+    "editor.document_highlight.read_background": "= l1 @ 0.16",
+    "terminal.background": "= t 0.05",
+    "terminal.foreground": "#ffffff",
+    "link_text.hover": "= l2",
+    "players": [
+     {
+      "cursor": "= l1",
+      "background": "= l1",
+      "selection": "= l1 @ 0.28"
+     }
+    ],
+    "syntax": {
+     "keyword": {
+      "color": "= l1"
+     },
+     "tag": {
+      "color": "= l1"
+     },
+     "label": {
+      "color": "= l1"
+     },
+     "string.escape": {
+      "color": "= l1"
+     },
+     "variable.special": {
+      "color": "= l1"
+     },
+     "title": {
+      "color": "= l1",
+      "font_weight": 700
+     },
+     "emphasis": {
+      "color": "= l1",
+      "font_style": "italic"
+     },
+     "emphasis.strong": {
+      "color": "= l1",
+      "font_weight": 700
+     },
+     "type": {
+      "color": "= l2"
+     },
+     "constructor": {
+      "color": "= l2"
+     },
+     "enum": {
+      "color": "= l2"
+     },
+     "variant": {
+      "color": "= l2"
+     },
+     "operator": {
+      "color": "#e6e6e6"
+     },
+     "punctuation.list_marker": {
+      "color": "#e6e6e6"
+     },
+     "punctuation.special": {
+      "color": "#e6e6e6"
+     },
+     "variable": {
+      "color": "#ffffff"
+     },
+     "embedded": {
+      "color": "#ffffff"
+     },
+     "primary": {
+      "color": "#ffffff"
+     },
+     "string": {
+      "color": "= mix(gray 80, acc, .25)"
+     },
+     "link_text": {
+      "color": "= mix(gray 80, acc, .25)"
+     },
+     "text.literal": {
+      "color": "= mix(gray 80, acc, .25)"
+     },
+     "property": {
+      "color": "= mix(gray 70, acc, .25)"
+     },
+     "function": {
+      "color": "= mix(gray 80, l1, .25)"
+     },
+     "attribute": {
+      "color": "= mix(gray 80, l1, .25)"
+     },
+     "string.regex": {
+      "color": "= mix(gray 80, l1, .25)"
+     },
+     "string.special": {
+      "color": "= mix(gray 80, l1, .25)"
+     },
+     "string.special.symbol": {
+      "color": "= mix(gray 80, l1, .25)"
+     },
+     "number": {
+      "color": "= mix(gray 70, l1, .25)"
+     },
+     "boolean": {
+      "color": "= mix(gray 70, l1, .25)"
+     },
+     "constant": {
+      "color": "= mix(gray 70, l1, .25)"
+     },
+     "link_uri": {
+      "color": "= mix(gray 70, l1, .25)"
+     },
+     "punctuation": {
+      "color": "= gray 70"
+     },
+     "punctuation.bracket": {
+      "color": "= gray 70"
+     },
+     "punctuation.delimiter": {
+      "color": "= gray 70"
+     },
+     "preproc": {
+      "color": "= gray 70"
+     },
+     "hint": {
+      "color": "= gray 60"
+     },
+     "comment": {
+      "color": "= gray 55",
+      "font_style": "italic"
+     },
+     "comment.doc": {
+      "color": "= gray 55",
+      "font_style": "italic"
+     },
+     "predictive": {
+      "color": "= gray 55",
+      "font_style": "italic"
+     }
+    }
+   }
+  }
+ ]
+}

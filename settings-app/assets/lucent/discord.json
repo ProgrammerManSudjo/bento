@@ -1,0 +1,27 @@
+{
+ "vars": {
+  "--bg-1": "= t .22",
+  "--bg-2": "= t .35",
+  "--bg-3": "= t .05",
+  "--bg-4": "= t .09",
+  "--hover": "= l1 @ .12",
+  "--active": "= l1 @ .20",
+  "--active-2": "= l1 @ .30",
+  "--button-border": "= l3 @ .12",
+  "--accent-1": "= l3",
+  "--accent-2": "= l2",
+  "--accent-3": "= l1",
+  "--accent-4": "= acc",
+  "--accent-5": "= d1"
+ },
+ "values": {
+  "seek_bar": "l1",
+  "seek_grabber": "l3",
+  "control_colour": "#a6a6a6",
+  "control_hover": "#f2f2f2",
+  "control_size": "18px",
+  "dot_close": "#f2f2f2",
+  "dot_minimize": "#a8a8a8",
+  "dot_maximize": "#6a6a6a"
+ }
+}

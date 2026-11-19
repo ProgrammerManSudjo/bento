@@ -1,0 +1,14 @@
+
+/* Essentials: visible tiles, full-strength icons */
+.tabbrowser-tab[zen-essential] .tab-background {
+    background-color: {{tile}} !important;
+}
+.tabbrowser-tab[zen-essential][selected] .tab-background {
+    background-color: {{tile_selected}} !important;
+}
+.tabbrowser-tab[zen-essential] .tab-icon-image,
+.tabbrowser-tab[zen-essential] .tab-icon-stack {
+    opacity: 1 !important;
+    filter: none !important;
+    -moz-context-properties: none !important;
+}

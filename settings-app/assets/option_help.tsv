@@ -1,0 +1,908 @@
+active_windows_title	label	string	"{win[title]}"	The label format for the active window.
+active_windows_title	label_alt	string	"[class_name='{win[class_name]}' exe='{win[process][name]}' hwnd={win[hwnd]}]"	The alternative label format for the active window.
+active_windows_title	class_name	string	""	Additional CSS class name for the widget.
+active_windows_title	label_no_window	string	None	The label to display when no window is active.
+active_windows_title	label_icon	boolean	true	Whether to display an icon with the label.
+active_windows_title	label_icon_size	integer	16	The size of the icon displayed with the label.
+active_windows_title	max_length	integer	None	The maximum length of the label text.
+active_windows_title	max_length_ellipsis	string	"..."	The ellipsis to use when the label text exceeds the maximum length.
+active_windows_title	monitor_exclusive	boolean	true	Whether the widget should be exclusive to the monitor.
+active_windows_title	ignore_window	dict	{'classes': [], 'processes': [], 'titles': []}	Windows to ignore based on class names, process names, and titles.
+active_windows_title	callbacks	dict	See below	Callbacks for mouse events on the widget.
+active_windows_title	rewrite	list	[]	List of rewrite rules for the widget. See below
+active_windows_title	keybindings	list	[]	Optional hotkeys. See Keybindings.
+active_windows_title	pattern	string	yes	None | A Python regular expression to match against the raw window title. More Info
+active_windows_title	replacement	string	yes	None | The replacement text; can use backrefs like \1, \2, etc.
+active_windows_title	case	string	no	None | If specified, the replacement will be converted to the specified case. Allowed values: lower, upper, title, capitalize
+applications	label	string	Required	The label for the applications widget.
+applications	class_name	string	""	The CSS class name for styling the widget. Optional.
+applications	image_icon_size	int	14	The size of the icon in pixels if the icon is an image.
+applications	app_list	list	Required	Application list with command.
+applications	tooltip	bool	True	Enable or disable tooltips for application names.
+audio_visualizer	class_name	string	""	Additional CSS class names for the widget container
+audio_visualizer	source	string	"auto"	Output device to capture. "auto" follows the Windows default device, anything else is the device's exact full name. See Picking an output device
+audio_visualizer	style	string	"bars"	Visual style: "bars", "waves", or "dots"
+audio_visualizer	height	integer	14	Paint surface height in pixels (4–64)
+audio_visualizer	smoothness	integer	55	Motion smoothing 0–100 (higher = smoother, slower). Expressed in real time, so the motion looks identical at any framerate
+audio_visualizer	sensitivity	integer	50	Amplitude trim 0–100. With auto_gain on it sets how hard the peaks push: 50 = loudest bars ride near the top, lower = calmer, higher = into the ceiling. With auto_gain off it is a plain multiplier (50 = 1×, 100 = 2×)
+audio_visualizer	auto_gain	boolean	true	Auto-sensitivity: continuously tracks the level so quiet tracks and loud tracks look the same and bars never pin flat at the top. Turn off to set the level yourself with sensitivity
+audio_visualizer	framerate	integer	60	Upper limit on repaints per second (1–120). Frames are pushed by the audio stream, so the real rate is also capped by the device period
+audio_visualizer	freq_min	integer	50	Lowest frequency bucket in Hz (20–24000, must be less than freq_max)
+audio_visualizer	freq_max	integer	12000	Highest frequency bucket in Hz (20–24000, must be greater than freq_min)
+audio_visualizer	hide_idle	boolean	false	Collapse the widget once audio stops, freeing its space in the bar. It reappears the moment audio returns
+audio_visualizer	hide_idle_after	integer	2000	How long audio must be absent before collapsing, in ms (100–60000)
+audio_visualizer	channels	string	"mono"	Visual channels: "stereo" or "mono"
+audio_visualizer	mono_option	string	"average"	Mono input source: "average", "left", or "right" (ignored when channels is "stereo")
+audio_visualizer	reverse	boolean	false	Flip frequency direction
+audio_visualizer	mirror	boolean	false	Grow from the vertical center instead of the bottom edge, symmetric up and down. Applies to all three styles
+audio_visualizer	edge_fade	integer or array	0	Edge fade in pixels. Single value, or a [left, right] list of exactly two values. Negative values are treated as 0
+audio_visualizer	keybindings	list	[]	Optional hotkeys. See Keybindings
+audio_visualizer	callbacks	dict	See below	Mouse callbacks: on_left, on_middle, on_right
+audio_visualizer	count	integer	24	Number of bar columns (4–128). With channels: stereo the count is split between the two channels. Past roughly 40 the extra bars mostly subdivide the low end rather than add detail (see Levels)
+audio_visualizer	width	integer	2	Bar thickness in pixels (1–32)
+audio_visualizer	gap	integer	4	Gap between bars in pixels (0–32)
+audio_visualizer	width	integer	80	Total widget width in pixels (16–512). Spectrum point count is derived automatically
+audio_visualizer	count	integer	24	Number of LED columns (4–128)
+audio_visualizer	size	integer	2	Block size in pixels (1–32)
+audio_visualizer	gap	integer	4	Gap between stacked blocks, also used between columns (0–32)
+battery	label	string	{icon}	The primary label format.
+battery	label_alt	string	{percent}% \	remaining: {time_remaining} | The alternative label format.
+battery	class_name	string	""	Additional CSS class name for the widget.
+battery	update_interval	integer	5000	The interval in milliseconds to update the widget (0–60000).
+battery	time_remaining_natural	boolean	False	Whether to display the remaining time in a natural format.
+battery	time_remaining_unlimited_icon	string	unlimited	Which string to use to display unlimited time remaining.
+battery	hide_unsupported	boolean	True	Whether to hide the widget if the current system does not have battery info.
+battery	charging_options	dict	See below	Options for charging state display.
+battery	status_thresholds	dict	See below	Thresholds for different battery statuses.
+battery	status_icons	dict	See below	Icons for different battery statuses.
+battery	keybindings	list	[]	Optional hotkeys. See Keybindings.
+battery	callbacks	dict	See below	Callback functions for different mouse button actions.
+battery	progress_bar	dict	See below	Progress bar settings.
+bluetooth	label	string	"\ue702"	Format string for the bar widget.
+bluetooth	label_alt	string	"\ue702"	Alternative format string.
+bluetooth	class_name	string	""	Extra CSS class for the widget.
+bluetooth	label_no_device	string	"No devices connected"	Text for {device_name} when nothing is connected.
+bluetooth	label_device_separator	string	", "	Separator between device names.
+bluetooth	max_length	integer	null	Max label length before truncation.
+bluetooth	max_length_ellipsis	string	"..."	Ellipsis used when truncating.
+bluetooth	tooltip	boolean	true	Show tooltip on hover.
+bluetooth	icons	dict	See below	Bar icons for on / off / connected (Segoe Fluent by default; all three use \ue702).
+bluetooth	device_aliases	list	[]	Rename devices in the bar label. Each item has two required string keys: name (the device name as reported by Windows) and alias (the name to show).
+bluetooth	keybindings	list	[]	Optional keyboard shortcuts. See Keybindings.
+bluetooth	callbacks	dict	See below	Mouse callbacks (on_middle / on_right default to do_nothing).
+bluetooth	menu_config	dict	See below	Popup menu options. Nested keys (labels, device_icons, ...) can also be set partially - only override what you need.
+bluetooth	blur	boolean	true	Acrylic blur on the popup.
+bluetooth	round_corners	boolean	true	Rounded popup corners.
+bluetooth	round_corners_type	string	"normal"	Corner style.
+bluetooth	border_color	string	"System"	Popup border color.
+bluetooth	alignment	string	"right"	left / right / center.
+bluetooth	direction	string	"down"	up / down.
+bluetooth	offset_top	integer	6	Vertical offset.
+bluetooth	offset_left	integer	0	Horizontal offset.
+bluetooth	labels	object	see defaults	Popup strings (title, your_devices, new_devices, not_connected, connected, more_settings, connect, disconnect, connecting, disconnecting, pair, manage, power_on, power_off). Partial overrides keep the rest of the defaults.
+bluetooth	device_icons	dict	see defaults	Device-type icons (headphones, headset, speaker, phone, tablet, laptop, computer, keyboard, mouse, controller, watch, camera, generic), scan (footer search for new devices), and battery (empty / low / medium / high / full). Segoe Fluent Icons by default.
+brightness	label	string	"{icon}"	The format string for the brightness widget.
+brightness	label_alt	string	"Brightness {percent}%"	The alternative format string for the brightness widget.
+brightness	tooltip	boolean	True	Whether to show the tooltip on hover.
+brightness	scroll_step	integer	1	The step size for scrolling the brightness level. This value must be between 1 and 100.
+brightness	invert_wheel	boolean	false	Whether to invert wheel scroll direction (useful on laptop trackpads)
+brightness	brightness_icons	list	See below	A list of icons representing different brightness levels. The icons are used based on the current brightness percentage.
+brightness	brightness_toggle_level	list	[]	The brightness levels to cycle through when the widget is clicked.
+brightness	ddc_poll_interval	integer	60	Seconds between background DDC/CI brightness polls for external monitors (0–600). 0 disables polling (popup still refreshes on open). Laptop panels use power events and do not use this.
+brightness	auto_light	boolean	False	Whether to automatically adjust the brightness icon based on the current brightness level.
+brightness	auto_light_icon	string	"\udb80\udce1"	The icon to use when the auto_light option is enabled.
+brightness	auto_light_night_level	int	50	The brightness level at which the widget switches to the night.
+brightness	auto_light_day_level	int	100	The brightness level at which the widget switches to the day.
+brightness	auto_light_night_start_time	string	"20:00"	The time at which the night starts.
+brightness	auto_light_night_end_time	string	"06:30"	The time at which the night ends.
+brightness	brightness_menu	dict	See below	Menu settings for the widget.
+brightness	callbacks	dict	See below	Callbacks for mouse events on the brightness widget.
+brightness	progress_bar	dict	See below	Progress bar settings.
+brightness	keybindings	list	[]	Optional hotkeys. See Keybindings.
+cpu	label	string	"\uf200 {info[histograms][cpu_percent]}"	The primary label format.
+cpu	label_alt	string	"\uf200 CPU: {info[percent][total]}% \	freq: {info[freq][current]:.2f} Mhz" | The alternative label format.
+cpu	class_name	string	""	Additional CSS class name for the widget.
+cpu	update_interval	integer	1000	The interval in milliseconds to update the widget (1000–60000).
+cpu	histogram_icons	list	See below	Exactly 9 icons representing CPU usage histograms.
+cpu	histogram_num_columns	integer	10	The number of columns in the histogram (0–128).
+cpu	callbacks	dict	See below	Callback functions for different mouse button actions.
+cpu	cpu_thresholds	dict	{'low': 25, 'medium': 50, 'high': 90}	Thresholds for CPU usage levels.
+cpu	progress_bar	dict	See below	Progress bar settings.
+cpu	hide_decimal	bool	false	Whether to hide decimal places in the CPU widget.
+cpu	menu	dict	See below	Configuration for the popup menu with graph and stats.
+cpu	keybindings	list	[]	Optional hotkeys. See Keybindings.
+cava	class_name	string	""	Additional CSS class names for the widget container
+cava	source	string	"auto"	Audio input source device. Use "auto" for the default device, or specify a device name to capture from a specific audio device. Requires cava >= 0.10.4 with device selection support
+cava	bar_height	integer	20	The height of bars in pixels
+cava	min_bar_height	integer	1	The minimum height of bars in pixels
+cava	bars_number	integer	10	The number of bars (0-512). 0 sets it to auto
+cava	output_bit_format	string	"16bit"	Binary bit format, can be '8bit' (0-255) or '16bit' (0-65530)
+cava	orientation	string	"bottom"	Visual orientation of the bar. Can be "top" or "bottom".
+cava	bar_spacing	integer	1	Space between bars
+cava	bar_width	integer	3	Bars' width in number of characters
+cava	sleep_timer	integer	0	Seconds with no input before cava goes to sleep mode. 0 to disable
+cava	sensitivity	integer	100	Manual sensitivity in %. 200 means double height
+cava	lower_cutoff_freq	integer	50	Lower cutoff frequencies for lowest bars
+cava	higher_cutoff_freq	integer	10000	Higher cutoff frequencies for highest bars
+cava	framerate	integer	60	Accepts only non-negative values
+cava	noise_reduction	integer	77	Noise reduction, 0-100. Higher = smoother but slower, lower = faster but noisier
+cava	channels	string	"stereo"	Visual channels. Can be 'stereo' or 'mono'
+cava	mono_option	string	"average"	Set mono to take input from 'left', 'right' or 'average'
+cava	reverse	integer	0	Set to 1 to display frequencies the other way around
+cava	waveform	integer	0	Show waveform instead of frequency spectrum, 1 = on, 0 = off
+cava	monstercat	integer	1	Disables or enables the so-called "Monstercat smoothing" with or without "waves". Set to 0 to disable.
+cava	waves	integer	0	Related to monstercat, 1 = on, 0 = off
+cava	foreground	string	"#ffffff"	Foreground color in hex format
+cava	gradient	integer	1	Gradient mode, 1 = on, 0 = off
+cava	gradient_color_1	string	None	First gradient color in hex format. Not set by default
+cava	gradient_color_2	string	None	Second gradient color in hex format. Not set by default
+cava	gradient_color_3	string	None	Third gradient color in hex format. Not set by default
+cava	hide_empty	boolean	false	Hide widget when no audio is playing (requires sleep_timer to be enabled)
+cava	bar_type	string	bars	Type of bar display. Can be 'bars', 'bars_mirrored', 'waves', or 'waves_mirrored'.
+cava	edge_fade	integer or array	0	Apply fade effect to edges in pixels. Can be a single integer (applies to both sides) or an array [left, right] for separate control. 0 to disable. Note: When both sides have fade, each is capped to half the widget width to prevent overlap. When only one side has fade, it can use the full widget width
+cava	keybindings	list	[]	Optional hotkeys. See Keybindings
+cava	callbacks	dict	See below	Callbacks for mouse events on the widget.
+claude_usage	label	string	'Claude {five_hour}%'	The format string for the label. Supports the placeholders below.
+claude_usage	label_alt	string	'Claude {seven_day}%'	The alternative format string, toggled by the toggle_label callback.
+claude_usage	update_interval	integer	60	How often the label and reset countdown are refreshed, in seconds. Must be between 30 and 3600.
+claude_usage	cache_ttl	integer	120	How long (seconds) a fetched result is cached on disk before the endpoint is queried again (0–3600). The endpoint is rate-limited, so keep this at a sane value.
+claude_usage	five_hour_reset_format	string	'relative'	How the 5-hour window's reset line is phrased in the popup: relative (Resets in 4h 11m) or absolute (Resets on Sat @ 6:00 AM).
+claude_usage	seven_day_reset_format	string	'absolute'	How the 7-day window's reset line is phrased in the popup: relative or absolute.
+claude_usage	reset_show_date	boolean	true	In absolute mode, include the month/day (Resets on Sat, Jun 13 @ 6:00 AM) so two windows resetting on the same weekday stay distinguishable.
+claude_usage	token_history	dict	{'enabled': false, ...}	Optional local token-usage history. See Token history.
+claude_usage	status	dict	{'enabled': false, ...}	Optional Claude API status indicator. See API status.
+claude_usage	tooltip	boolean	true	Whether to show a summary tooltip on hover.
+claude_usage	callbacks	dict	See below	Mouse-click callbacks.
+claude_usage	menu	dict	See below	Popup menu settings.
+claude_usage	keybindings	list	[]	Optional hotkeys. See Keybindings.
+clock	label	string	'\uf017 {%H:%M:%S}'	The format string for the clock. You can use placeholders like {%H:%M:%S}, {icon}, or {alarm} to dynamically insert time information.
+clock	label_alt	string	'\uf017 {%d-%m-%y %H:%M:%S}'	The alternative format string for the clock. Useful for displaying additional time details.
+clock	class_name	string	""	Additional CSS class name for the widget.
+clock	tooltip	boolean	true	Whether to show the tooltip on hover.
+clock	locale	string	""	The locale to use for the clock. If not specified, it defaults to an empty string.
+clock	update_interval	integer	1000	The interval in milliseconds to update the clock. Must be between 0 and 60000.
+clock	timezones	list	[]	A list of timezones to cycle through. Each timezone should be a valid timezone string.
+clock	icons	dict	{}	A dictionary of icons for the different times of day. Keys should be in format clock_HH where HH is 00-23.
+clock	alarm_icons	dict	See below	Icons for alarm states (enabled, disabled, snooze).
+clock	calendar	dict	See below	Calendar settings for the widget.
+clock	keybindings	list	[]	Optional hotkeys. See Keybindings.
+clock	callbacks	dict	See below	Callbacks for mouse events on the clock widget.
+codex_usage	label	string	Codex {primary_remaining}%	Primary label template.
+codex_usage	label_alt	string	Codex {secondary_window} {secondary_remaining}%	Alternate label shown by toggle_label.
+codex_usage	codex_path	string	codex	Codex executable name or full path.
+codex_usage	update_interval	integer	60	Refresh timer in seconds (30-3600).
+codex_usage	cache_ttl	integer	120	Fresh-cache lifetime in seconds (0-3600).
+codex_usage	timeout	number	15	app-server response timeout in seconds (1-60).
+codex_usage	tooltip	boolean	true	Show remaining/used details on hover.
+codex_usage	show_token_usage	boolean	true	Aggregate local session token metadata for the model chart and monthly heatmap.
+codex_usage	stale_icon	string	⚠	Warning icon used by the {stale} placeholder.
+codex_usage	progress_bar	dictionary	See below	Native bar indicator showing the active window's remaining percentage.
+codex_usage	keybindings	list	[]	Optional hotkeys. See Keybindings.
+codex_usage	callbacks	dictionary	See below	Mouse actions.
+codex_usage	menu	dictionary	See below	Popup position, appearance, section visibility, and Fluent navigation icons.
+control_center	label	string	"<span>\ue90a</span>"	Main widget launcher icon.
+control_center	label_alt	string	"<span>\ue90a</span>"	Alternative launcher label.
+control_center	class_name	string	""	Additional CSS class name for the widget.
+control_center	tooltip	boolean	False	Enable launcher tooltip. When enabled, buttons inside the popup will also display tooltips.
+control_center	sections	dict	See below	Control visibility and settings of each popup section (system_controls, quick_actions, sliders, power, media).
+control_center	sections_order	list	See below	Defines visibility and render order of sections from top to bottom.
+control_center	popup	dict	See below	Popup positioning and backdrop effect settings.
+control_center	keybindings	list	[]	Optional hotkeys. See Keybindings.
+control_center	callbacks	dict	See below	Mouse callbacks for the launcher widget.
+copilot	label	string	"{icon}"	Label format for the bar. Supports {icon}, {used}, {allowance}, {percentage}, {total_cost}, {additional_usage}, {status}, {reset_date}
+copilot	label_alt	string	"{used}/{allowance}"	Alternative label (toggle with right-click)
+copilot	token	string	""	GitHub token. Leave empty to use OAuth sign-in, or set to "env" to read from YASB_COPILOT_TOKEN env var
+copilot	plan	string	"pro"	Your Copilot plan: "pro" (1,500 credits), "pro_plus" (7,000 credits) or "max" (20,000 credits)
+copilot	tooltip	boolean	true	Show tooltip on hover
+copilot	update_interval	integer	3600	Refresh interval in seconds
+copilot	menu	dict	see Menu	Popup menu options. chart enables the daily usage chart (set to false to skip daily API calls)
+copilot	keybindings	list	[]	Optional hotkeys. See Keybindings
+copilot	callbacks	dict	See below	Mouse callbacks, see Callbacks
+custom	label	string	Required	The format string for data, for example "{data}"
+custom	label_alt	string	""	The alternative format string.
+custom	label_max_length	int	None	The maximum length of the label.
+custom	label_placeholder	string	"Loading..."	Placeholder text when data is not available.
+custom	tooltip	boolean	false	Whether to show the tooltip on hover.
+custom	tooltip_label	string	None	Custom format string for the tooltip. If not specified, shows raw data.
+custom	class_name	string	Required	The CSS class name for the widget.
+custom	exec_options	dict	See below	Execution options for custom widget.
+custom	keybindings	list	[]	Optional hotkeys. See Keybindings.
+custom	callbacks	dict	See below	Callbacks for mouse events.
+disk	label	string	'{volume_label} {space[used][percent]}'	The format string for the disk widget.
+disk	label_alt	string	'{volume_label} {space[used][gb]} / {space[total][gb]}'	The alternative format string for the disk widget.
+disk	class_name	string	""	Additional CSS class name for the widget.
+disk	volume_label	string	'C'	Partition which you want to show in the bar
+disk	decimal_display	integer	1	The number of decimal places to show, default 1 (min 0 max 3)
+disk	update_interval	integer	60	The interval in seconds to update the disk widget. Must be between 0 and 3600.
+disk	group_label	dict	See below	Group labels for multiple disks. This will show the labels of multiple disks in a popup window.
+disk	keybindings	list	[]	Optional hotkeys. See Keybindings.
+disk	callbacks	dict	See below	Callbacks for mouse events.
+disk	disk_thresholds	dict	{'low': 25, 'medium': 50, 'high': 90}	Thresholds for Disk usage levels.
+disk	progress_bar	dict	See below	Progress bar settings.
+dnd	label	str	"{icon}"	The primary text shown on the widget.
+dnd	label_alt	str	"{icon} {status}"	The alternate text shown after calling the toggle_label callback.
+dnd	class_name	str	""	A custom CSS class added to the widget container.
+dnd	tooltip	bool	true	Whether to show the status tooltip on hover.
+dnd	default_active_mode	str	"priority"	The mode that will be activated when toggling from "disabled". Valid options: "priority" or "alarms".
+dnd	callbacks	dict	See below	Custom mouse actions mapped to widget functions.
+dnd	icons	dict	See below	A dictionary mapping statuses to font/icon strings.
+gpu	label	string	"{info[utilization]}%"	The primary label format.
+gpu	label_alt	string	"{info[mem_used]}/{info[mem_total]}"	The alternative label format.
+gpu	class_name	string	""	Additional CSS class name for the widget.
+gpu	gpu_index	integer	0	The index of the GPU to monitor (0 for the first GPU, 1 for the second, etc.).
+gpu	update_interval	integer	2000	The interval in milliseconds to update the widget (2000–60000).
+gpu	histogram_icons	list	See below	Exactly 9 icons representing GPU utilization histograms.
+gpu	histogram_num_columns	integer	10	The number of columns in the histogram (1–128).
+gpu	callbacks	dict	See below	Callback functions for different mouse button actions.
+gpu	gpu_thresholds	dict	{'low': 30, 'medium': 60, 'high': 90}	Thresholds for GPU utilization levels.
+gpu	progress_bar	dict	See below	Progress bar settings.
+gpu	hide_decimal	bool	false	Hide decimal places for utilization, temperature, and power draw values.
+gpu	units	string	"metric"	Temperature unit: "metric" for Celsius, "imperial" for Fahrenheit.
+gpu	menu	dict	See below	Configuration for the popup menu with graph and stats.
+gpu	keybindings	list	[]	Optional hotkeys. See Keybindings.
+github	label	string	'{icon}'	The format string for the label. You can use placeholders like {icon} to dynamically insert icon information.
+github	label_alt	string	'{data} Notifications'	The alternative format string for the label. Useful for displaying additional notification details.
+github	tooltip	boolean	true	Whether to show the tooltip on hover.
+github	update_interval	integer	600	The interval in seconds to update the notifications. Must be between 60 and 3600.
+github	token	string	""	GitHub personal access token. Leave empty to use OAuth sign-in, or set to "env" to read from YASB_GITHUB_TOKEN.
+github	max_notification	integer	30	The maximum number of notifications to display in the menu.
+github	notification_dot	dict	See below	A dictionary specifying the notification dot settings for the widget.
+github	hide_empty	boolean	false	Whether to hide the widget when there are no unread notifications.
+github	only_unread	boolean	false	Whether to show only unread notifications.
+github	show_comment_count	boolean	false	Whether to request and display aggregated comment counts for supported notifications.
+github	reason_filters	list	[]	Optional list of notification reasons to include (e.g. ['mention', 'assign']). Empty list returns all reasons.
+github	max_field_size	integer	100	The maximum number of characters in the title before truncation.
+github	menu	dict	See below	Menu settings for the widget.
+github	keybindings	list	[]	Optional hotkeys. See Keybindings.
+github	icons	dict	See below	Icons for different types of notifications in the menu.
+glazewm_binding_mode	label	string	'<span>{icon}</span> {binding_mode}'	The format string for the binding mode. You can use a placeholder {binding_mode} to dynamically insert active binding_mode.
+glazewm_binding_mode	label_alt	string	'<span>{icon}</span> Current mode: {binding_mode}'	The alternative format string for the binding mode.
+glazewm_binding_mode	glazewm_server_uri	string	'ws://localhost:6123'	Optional GlazeWM server uri.
+glazewm_binding_mode	hide_if_no_active	boolean	true	Hide the widget when no binding mode is active.
+glazewm_binding_mode	label_if_no_active	string	"No binding mode active"	Label to display when no binding mode is active.
+glazewm_binding_mode	default_icon	string	'\uf071'	Default icon for the binding modes where no other icon is specified.
+glazewm_binding_mode	icons	dict	{'none': '', 'resize': '\uf071', 'pause': '\uf28c'}	Specified icons for each Binding Mode; if a binding mode is not specified then the default_icon will be used.
+glazewm_binding_mode	binding_modes_to_cycle_through	list	['none', 'resize', 'pause']	Binding Mode names to cycle through with callbacks next_binding_mode and prev_binding_mode
+glazewm_binding_mode	keybindings	list	[]	Optional hotkeys. See Keybindings.
+glazewm_binding_mode	callbacks	dict	See below	Callbacks for mouse events on the widget.
+glazewm_tiling_direction	horizontal_label	string	'\udb81\udce1'	The label used for horizontal tiling direction.
+glazewm_tiling_direction	vertical_label	string	'\udb81\udce2'	The label used for vertical tiling direction.
+glazewm_tiling_direction	glazewm_server_uri	string	'ws://localhost:6123'	Optional GlazeWM server uri.
+glazewm_workspaces	offline_label	string	'GlazeWM Offline'	The label to display when GlazeWM is offline.
+glazewm_workspaces	populated_label	string	None	Optional label for populated workspaces.
+glazewm_workspaces	empty_label	string	None	Optional label for empty workspaces.
+glazewm_workspaces	active_populated_label	string	None	Optional label for the currently active workspace (has opened windows).
+glazewm_workspaces	active_empty_label	string	None	Optional label for the currently active workspace (has no windows opened).
+glazewm_workspaces	focused_populated_label	string	None	Optional label for the currently focused workspace (has opened windows). Falls back to active_populated_label if not set.
+glazewm_workspaces	focused_empty_label	string	None	Optional label for the currently focused workspace (has no windows opened). Falls back to active_empty_label if not set.
+glazewm_workspaces	hide_if_offline	boolean	false	Whether to hide workspaces widget if GlazeWM is offline.
+glazewm_workspaces	monitor_exclusive	boolean	true	If true, show monitor-local workspaces (default). If false, aggregate active workspaces from GlazeWM IPC and show them on every bar.
+glazewm_workspaces	glazewm_server_uri	string	'ws://localhost:6123'	Optional GlazeWM server uri.
+glazewm_workspaces	enable_scroll_switching	boolean	true	Enable scroll switching between workspaces.
+glazewm_workspaces	reverse_scroll_direction	boolean	false	Reverse scroll direction.
+glazewm_workspaces	app_icons	dict	See below	Controls the display of opened app icons per workspace. enabled_focused falls back to enabled_active if not explicitly set to a non-None bool value.
+glucose_monitor	label	string	<span>\ud83e\ude78</span><span class='sgv'>{sgv}</span><span>{direction}</span>	The format string for the widget.
+glucose_monitor	error_label	string	<span>\ud83e\ude78</span>{error_message}	The format string for the error widget.
+glucose_monitor	tooltip	string	({sgv_delta}) {delta_time_in_minutes} min	The format string for the tooltip.
+glucose_monitor	host	string	""	The URL for your Nightscout CGM remote monitor.
+glucose_monitor	secret	string	""	The secret key for the CGM API.
+glucose_monitor	secret_env_name	string	""	If the secret variable is equals to env then widget will try to get secret from the environment variable with a name of the secret_env_name value.
+glucose_monitor	direction_icons	dict	See below	Direction icon settings.
+glucose_monitor	sgv_measurement_units	string	mmol/l	SGV measurement units can be mg/dl or mmol/l.
+glucose_monitor	callbacks	dict	See below	Callbacks for mouse events on the glucose monitor widget.
+glucose_monitor	notify_on_error	boolean	True	Send a notification on error.
+glucose_monitor	sgv_range	dict	{"min": 4, "max": 9}	Normal SGV range to append in-range or out-range CSS class for span with .sgv CSS class.
+glucose_monitor	keybindings	list	[]	Optional hotkeys. See Keybindings.
+grouper	class_name	string	'grouper'	The name identifier for the grouper widget instance.
+grouper	widgets	list	[]	List of widget names to group together inside this container.
+grouper	hide_empty	boolean	False	If true, the grouper widget will be hidden if all its child widgets are hidden.
+grouper	collapse_options	dict	See below	Options for collapsible grouper functionality.
+grouper	keybindings	list	[]	Optional hotkeys. See Keybindings and the actions below.
+grouper	enabled	boolean	False	Enable/disable collapse functionality.
+grouper	exclude_widgets	list	[]	List of widget names (from widgets) to exclude from collapsing. These widgets remain visible when collapsed.
+grouper	expanded_label	string	"\uf054"	Icon/label shown when grouper is expanded.
+grouper	collapsed_label	string	"\uf053"	Icon/label shown when grouper is collapsed.
+grouper	label_position	string	"right"	Position of collapse button: "left" or "right".
+home	label	string	"\ue71a"	Icon or text for button.
+home	menu_list	list	None	List of menu items. Supports path, uri, or command.
+home	system_menu	boolean	true	Show system menu.
+home	power_menu	boolean	true	Show power menu.
+home	blur	boolean	false	Blur background.
+home	round_corners	boolean	true	Round corners.
+home	round_corners_type	string	'normal'	Round corners type. Possible values: 'normal', 'small'.
+home	border_color	string	'System'	Border color.
+home	alignment	string	"left"	Alignment of the menu. Possible values: "left", "center", "right".
+home	direction	string	"down"	Direction of the menu. Possible values: "up", "down".
+home	offset_top	int	6	Distance from the top or bottom edge of the bar.
+home	offset_left	int	0	Distance from the left or right edge of the bar.
+home	menu_labels	dict	See below	Custom label names for system and power items.
+home	keybindings	list	[]	Optional hotkeys. See Keybindings.
+home	callbacks	dict	See below	Mouse event callbacks.
+komorebi_control	label	string	"\udb80\uddd9"	Icon or text label.
+komorebi_control	icons	dict	{'start': "\uead3", 'stop': "\uead7", 'reload': "\uead2"}	Button icons.
+komorebi_control	run_ahk	boolean	false	Whether to run AutoHotKey.
+komorebi_control	run_whkd	boolean	false	Whether to run WHKD.
+komorebi_control	run_masir	boolean	false	Whether to run Masir.
+komorebi_control	config_path	string	None	Path to the Komorebi configuration file. If not set, uses default location.
+komorebi_control	show_version	boolean	true	Whether to show the komorebi version.
+komorebi_control	komorebi_menu	dict	See below	Settings for the Komorebi menu.
+komorebi_control	keybindings	list	[]	Optional hotkeys. See Keybindings.
+komorebi_control	callbacks	dict	See below	Callbacks for mouse events.
+komorebi_layout	hide_if_offline	boolean	false	Whether to hide the widget if offline.
+komorebi_layout	label	string	"{icon}"	The label format string for the widget.
+komorebi_layout	layouts	list	See below	The list of layouts available for the widget.
+komorebi_layout	layout_icons	dict	See below	The icons for each layout.
+komorebi_layout	layout_menu	dict	See below	Popup menu for layout selection.
+komorebi_layout	keybindings	list	[]	Optional hotkeys. See Keybindings.
+komorebi_layout	callbacks	dict	See below	Callbacks for mouse events on the widget.
+komorebi_layout	blur	boolean	true	Enables a blur effect in the menu popup.
+komorebi_layout	round_corners	boolean	true	If true, the menu has rounded corners.
+komorebi_layout	round_corners_type	string	"normal"	Determines the corner style; allowed values are normal and small.
+komorebi_layout	border_color	string	"System"	Sets the border color for the menu. Can be "System", None or HEX
+komorebi_layout	alignment	string	"left"	Horizontal alignment of the menu relative to the widget (left, right, center).
+komorebi_layout	direction	string	"down"	Direction in which the menu opens (down or up).
+komorebi_layout	offset_top	integer	6	Vertical offset for fine positioning of the menu.
+komorebi_layout	offset_left	integer	0	Horizontal offset for fine positioning of the menu.
+komorebi_layout	show_layout_icons	boolean	true	Whether to show icons for each layout in the menu.
+komorebi_stack	label_offline	string	'Komorebi Offline'	The label to display when Komorebi is offline.
+komorebi_stack	label_window	string	'{title}'	The format string for window buttons.
+komorebi_stack	label_window_active	string	'{title}'	The format string for the active window button.
+komorebi_stack	label_no_window	string	''	The label to display when no window is in focus.
+komorebi_stack	label_zero_index	boolean	false	Whether to use zero-based indexing for window labels.
+komorebi_stack	show_icons	string	never	Whether to display app icons.
+komorebi_stack	icon_size	integer	16	The size of the icon displayed.
+komorebi_stack	max_length	integer	None	The maximum length of the label text.
+komorebi_stack	max_length_active	integer	None	The maximum length of the label text for the active window.
+komorebi_stack	max_length_overall	integer	None	If specified, max_length will be calculated as max_length_overall divided by the number of inactive windows.
+komorebi_stack	max_length_ellipsis	string	'...'	The ellipsis to use when the label text exceeds the maximum length.
+komorebi_stack	hide_if_offline	boolean	false	Whether to hide the widget if Komorebi is offline.
+komorebi_stack	show_only_stack	boolean	false	Whether to hide the widget if no stacked windows in focus.
+komorebi_stack	rewrite	list	[]	Rewrite options for window titles and process names.
+komorebi_stack	enable_scroll_switching	boolean	false	Enable scroll switching between windows.
+komorebi_stack	reverse_scroll_direction	boolean	false	Reverse scroll direction.
+komorebi_stack	pattern	string	yes	None | A Python regular expression to match against the window title or process name. More Info
+komorebi_stack	replacement	string	yes	None | The replacement text; can use backrefs like \1, \2, etc.
+komorebi_stack	case	string	no	None | If specified, the replacement will be converted to the specified case. Allowed values: lower, upper, title, capitalize
+komorebi_workspaces	label_offline	string	'Komorebi Offline'	The label to display when Komorebi is offline.
+komorebi_workspaces	label_workspace_btn	string	'{index}'	The format string for workspace buttons.
+komorebi_workspaces	label_workspace_active_btn	string	'{index}'	The format string for the active workspace button.
+komorebi_workspaces	label_workspace_populated_btn	string	'{index}'	The format string for the populated workspace button.
+komorebi_workspaces	label_default_name	string	''	The default name for workspaces.
+komorebi_workspaces	label_float_override	string	'Override Active'	The label to display when Komorebi's float override is active.
+komorebi_workspaces	toggle_workspace_layer	dict	See below	Controls toggling between tiling and floating layers.
+komorebi_workspaces	app_icons	dict	See below	Controls the display of opened app icons per workspace.
+komorebi_workspaces	hide_if_offline	boolean	false	Whether to hide the widget if Komorebi is offline.
+komorebi_workspaces	label_zero_index	boolean	false	Whether to use zero-based indexing for workspace labels.
+komorebi_workspaces	hide_empty_workspaces	boolean	false	Whether to hide empty workspaces.
+komorebi_workspaces	enable_scroll_switching	boolean	false	Enable scroll switching between workspaces.
+komorebi_workspaces	reverse_scroll_direction	boolean	false	Reverse scroll direction.
+language	label	string	"{lang[language_code]}-{lang[country_code]}"	The format string for the label.
+language	label_alt	string	"{lang[full_name]}"	The alternative format string for the label. Useful for displaying the full language name.
+language	update_interval	integer	5	The interval in seconds to update the language information. Must be between 1 and 3600.
+language	class_name	string	""	Additional CSS class name for the widget.
+language	callbacks	dict	See below	The dictionary of callback functions for different mouse actions.
+language	language_menu	dict	See below	Options for the language menu.
+language	keybindings	list	[]	Optional hotkeys. See Keybindings.
+language	blur	boolean	true	Enables a blur effect in the menu popup.
+language	round_corners	boolean	true	If true, the menu has rounded corners.
+language	round_corners_type	string	"normal"	Determines the corner style; allowed values are normal and small.
+language	border_color	string	"system"	Sets the border color for the menu. Can be "system", None or HEX color.
+language	alignment	string	"right"	Horizontal alignment of the menu relative to the widget (left, right, center).
+language	direction	string	"down"	Direction in which the menu opens (down or up).
+language	offset_top	integer	6	Vertical offset for fine positioning of the menu.
+language	offset_left	integer	0	Horizontal offset for fine positioning of the menu.
+language	layout_icon	string	"\uf11c"	Icon displayed next to layout names in the menu.
+language	show_layout_icon	boolean	true	Whether to show the layout icon next to each language entry.
+launchpad	label	string	'\udb85\udcde'	The label/icon for the widget on the bar.
+launchpad	search_placeholder	string	"Search applications..."	Placeholder text for the search field.
+launchpad	app_icon_size	int	64	Size of application icons in pixels.
+launchpad	window	dict	See below	Popup window size and fullscreen options.
+launchpad	window_style	dict	See below	Popup window styling (blur, corners, border, etc).
+launchpad	window_animation	dict	{fade_in_duration: 400, fade_out_duration: 400}	Animation settings for showing/hiding the popup.
+launchpad	group_apps	bool	false	Enable grouping to organize apps by category.
+launchpad	callbacks	dict	See below	Mouse event callbacks.
+launchpad	keybindings	list	[]	Optional hotkeys. See Keybindings.
+launchpad	shortcuts	dict	See below	Keyboard shortcuts for popup actions.
+libre_hw_monitor	label	string	"<span>\udb82\udcae </span> {info[value]}{info[unit]}"	The primary label format.
+libre_hw_monitor	label_alt	string	"<span>\uf437 </span>{info[histogram]} {info[value]} ({info[min]}/{info[max]}) {info[unit]}"	Histograms. The alternative label format.
+libre_hw_monitor	sensor_id	string	"/amdcpu/0/load/0"	Libre Hardware Monitor SensorId from http://localhost:8085/data.json
+libre_hw_monitor	class_name	string	"libre-monitor-widget"	CSS class name for styling of different widget instances.
+libre_hw_monitor	update_interval	integer	1000	The interval in milliseconds to update the widget.
+libre_hw_monitor	precision	integer	2	Floating point precision of the info[value].
+libre_hw_monitor	history_size	integer	60	The size of the min/max history.
+libre_hw_monitor	histogram_num_columns	integer	10	The number of columns in the histogram.
+libre_hw_monitor	histogram_fixed_min	float	None	Histogram minimum value (-10000 to 10000). If None - set as history minimum value.
+libre_hw_monitor	histogram_fixed_max	float	None	Histogram maximum value (-10000 to 10000). If None - set as history maximum value.
+libre_hw_monitor	sensor_id_error_label	string	N/A	The label shown when the sensor id is invalid or the sensor does not exist/disabled.
+libre_hw_monitor	connection_error_label	string	Connection error...	The label shown when YASB can't connect to the Libre Hardware Monitor Web server. Either the server is not running or the IP/port is wrong.
+libre_hw_monitor	auth_error_label	string	Auth Failed...	The label shown when there is a username/password issue while connecting to LHM Web server if the authentication is enabled in LHM settings.
+libre_hw_monitor	server_host	string	"localhost"	Libre Hardware Monitor server host.
+libre_hw_monitor	server_port	integer	8085	Libre Hardware Monitor server port.
+libre_hw_monitor	server_username	string	""	Libre Hardware Monitor username. Only needed if auth is enabled.
+libre_hw_monitor	server_password	string	""	Libre Hardware Monitor password. Only needed if auth is enabled.
+libre_hw_monitor	histogram_icons	list	See below	Exactly 9 icons representing the histogram levels.
+libre_hw_monitor	callbacks	dict	See below	Callback functions for different mouse button actions.
+libre_hw_monitor	libre_menu	dict	See below	Configuration for the Libre Hardware Monitor menu.
+libre_hw_monitor	keybindings	list	[]	Optional hotkeys. See Keybindings.
+media_lite	class_name	string	""	Extra CSS class on the widget.
+media_lite	show_thumbnail	boolean	true	Show album art on the bar.
+media_lite	show_title	boolean	true	Show the track title on the bar. Missing values use Unknown Title.
+media_lite	show_artist	boolean	true	Show the artist under the title when SMTC provides one; hidden otherwise (title stays vertically centered). When scrolling_label is on, artist joins the title on one scrolling line.
+media_lite	scrolling_label	boolean	false	Scroll the bar text on one line (CSS class label). With title and artist both enabled: Title - Artist. Scroll style is fixed in the widget.
+media_lite	image_size	integer	28	Bar thumbnail size in pixels.
+media_lite	thumbnail_corner_radius	integer	6	Corner radius for the bar thumbnail.
+media_lite	max_label_size	integer	20	Max characters for both title and artist on the bar.
+media_lite	tooltip	boolean	true	Show tooltips on the bar (title + artist) and popup controls.
+media_lite	media_menu	dict	See below	Popup menu options.
+media_lite	callbacks	dict	See below	Mouse callbacks.
+media_lite	keybindings	list	[]	Optional hotkeys. See Keybindings.
+media	label	string	"{title}"	The main label format for the media widget.
+media	label_alt	string	"{artist} - {title}"	The alternative label format for the media widget.
+media	separator	string	" - "	The dynamic separator. Automatically stripped. More below.
+media	class_name	string	""	The custom CSS class name for the widget.
+media	max_field_size	dict		Maximum field sizes for labels.
+media	show_thumbnail	boolean	true	Whether to show the media thumbnail.
+media	controls_only	boolean	false	Whether to show only the media controls.
+media	controls_left	boolean	true	Whether to position the controls on the left.
+media	controls_hide	boolean	false	Whether to hide the media controls buttons
+media	hide_empty	boolean	false	Whether to hide the widget when there is no media information.
+media	thumbnail_alpha	integer	50	The alpha transparency value for the thumbnail.
+media	thumbnail_padding	integer	8	The padding around the thumbnail.
+media	thumbnail_corner_radius	integer	0	The corner radius for the thumbnail.
+media	symmetric_corner_radius	boolean	false	Whether to use symmetric corner radius for the thumbnail.
+media	thumbnail_edge_fade	boolean	false	Whether to apply an edge fade effect to the thumbnail.
+media	icons	dict		Icons for media controls.
+media	media_menu	dict	See below	Media menu popup.
+media	media_menu_icons	dict	See below	Media menu icons for popup.
+media	scrolling_label	dict	See below	Widget label scrolling options
+media	progress_bar	dict	See below	On widget progress bar options.
+media	keybindings	list	[]	Optional hotkeys. See Keybindings.
+media	callbacks	dict	See below	Callbacks for mouse events on the widget.
+memory	label	string	'\uf4bc {virtual_mem_free}/{virtual_mem_total}'	The format string for the memory widget. Displays free and total virtual memory.
+memory	label_alt	string	'\uf4bc VIRT: {virtual_mem_percent}% SWAP: {swap_mem_percent}%'	The alternative format string for the memory widget. Displays virtual and swap memory percentages.
+memory	class_name	string	""	Additional CSS class name for the widget.
+memory	update_interval	integer	5000	The interval in milliseconds to update the memory widget. Must be between 1000 and 60000.
+memory	callbacks	dict	See below	Callbacks for mouse events on the memory widget.
+memory	histogram_icons	list	See below	Exactly 9 icons representing RAM usage histograms.
+memory	memory_thresholds	dict	{'low': 25, 'medium': 50, 'high': 90}	Thresholds for memory usage levels.
+memory	progress_bar	dict	See below	Progress bar settings.
+memory	hide_decimal	boolean	false	Whether to hide decimal places in the memory widget.
+memory	menu	dict	See below	Configuration for the popup menu with graph and stats.
+memory	keybindings	list	[]	Optional hotkeys. See Keybindings.
+microphone	label	string	'{icon}'	The format string for the microphone widget. Displays icon or level.
+microphone	label_alt	string	'{icon} {level}%'	The alternative format string for the microphone widget. Displays icon or level.
+microphone	class_name	string	""	Additional CSS class name for the widget.
+microphone	mute_text	string	'mute'	Text used by {level} to indicate muted volume
+microphone	tooltip	boolean	true	Whether to show the tooltip on hover.
+microphone	scroll_step	int	2	The step size for volume adjustment when scrolling. The value is in percentage points (1-100).
+microphone	invert_wheel	boolean	false	Whether to invert wheel scroll direction (useful on laptop trackpads)
+microphone	icons	dict	{'normal': '\uf130', 'muted': '\uf131'}	Icons for microphone widget
+microphone	callbacks	dict	See below	Callbacks for mouse events on the microphone widget.
+microphone	keybindings	list	[]	Optional hotkeys. See Keybindings.
+microphone	mic_menu	dict	See below	Menu settings for the widget.
+microphone	progress_bar	dict	See below	Progress bar settings.
+notes	label	String	<span>\udb82\udd0c</span> {count}	Primary label template, supports the {count} placeholder which is replaced with the number of notes.
+notes	label_alt	String	{count} notes	Alternative label format used when switching widget modes.
+notes	class_name	String	""	Additional CSS class name for the widget.
+notes	data_path	String	""	Custom path to JSON file for storing notes. Leave empty to use default location (~/.config/yasb/notes.json). Supports ~ for home directory.
+notes	start_floating	Boolean	false	Whether the menu should start in floating mode.
+notes	paste_plain_text	Boolean	false	If true, the widget will paste plain text from the clipboard by default, while Shift+Ctrl+V will paste rich text.
+notes	enter_to_add_note	Boolean	true	If true, pressing Enter in the input field will add a new note and Shift+Enter will add a new line.
+notes	menu	Dict	See below	Popup menu settings. See details below.
+notes	icons	Dict	See below	Icons used within the widget. See details below.
+notes	keybindings	List	[]	Optional hotkeys. See Keybindings.
+notes	callbacks	Dict	See below	Maps mouse actions to widget functions (e.g., toggling the menu or label).
+notes	blur	Boolean	true	Enables a blur effect in the menu popup.
+notes	round_corners	Boolean	true	If true, the menu has rounded corners.
+notes	round_corners_type	String	"normal"	Determines the corner style; allowed values are normal and small.
+notes	border_color	String	"System"	Sets the border color for the menu.
+notes	alignment	String	"right"	Horizontal alignment of the menu relative to the widget (e.g., left, right, center).
+notes	direction	String	"down"	Direction in which the menu opens.
+notes	offset_top	Integer	6	Vertical offset for fine positioning of the menu.
+notes	offset_left	Integer	0	Horizontal offset for fine positioning.
+notes	show_date_time	Boolean	true	Indicates whether to display the note’s timestamp.
+notes	note	String	"\ue70b"	Icon representing a note.
+notes	delete	String	"\ue74d"	Icon used for the delete action.
+notes	copy	String	"\ue8c8"	Icon for copying text.
+notes	float_on	String	"\ue922"	Icon shown when floating can be enabled.
+notes	float_off	String	"\ue923"	Icon shown when floating can be disabled.
+notes	close	String	"\ue8bb"	Icon for the close button in the header.
+notifications	label	string	"{count} new notifications"	The format string for the notifications widget.
+notifications	label_alt	string	"{count} new notifications"	The alternative format string for the notifications widget.
+notifications	class_name	string	""	Additional CSS class name for the widget.
+notifications	tooltip	boolean	true	Whether to show the tooltip on hover.
+notifications	icons	dict	{'new': '\udb80\udc9e', 'default': '\udb80\udc9a'}	Icons for different notification states.
+notifications	hide_empty	boolean	false	Whether to hide the widget when there are no notifications.
+notifications	keybindings	list	[]	Optional hotkeys. See Keybindings.
+notifications	callbacks	dict	See below	Callbacks for mouse events on the notifications widget.
+obs	connection	dict	{host: "localhost", port: 4455, password: ""}	Connection info for OBS WebSocket Server
+obs	icons	dict	See below	Icons for recording states, virtual camera, studio mode, and streaming
+obs	hide_when_not_recording	boolean	false	Hide widget when not recording
+obs	blinking_icon	boolean	true	Blink record/stream icon when active
+obs	show_record_time	boolean	false	Show recording duration
+obs	show_virtual_cam	boolean	false	Show virtual camera status button
+obs	show_studio_mode	boolean	false	Show studio mode status button
+obs	show_stream	boolean	false	Show stream status button
+obs	show_stream_time	boolean	false	Show streaming duration
+obs	show_scene_name	boolean	false	Show current OBS program scene name
+obs	show_stream_stats	boolean	false	Show stream bitrate (kbps) and dropped frames while streaming
+obs	tooltip	boolean	true	Enable or disable tooltips for buttons
+obs	keybindings	list	[]	Optional hotkeys, see Callbacks (Hotkey Only) and Keybindings
+open_meteo	label	string	'{icon}'	The format string for the weather label. You can use placeholders like {temp}, {icon}, etc.
+open_meteo	label_alt	string	'{temp}'	The alternative format string for the weather label.
+open_meteo	class_name	string	""	Additional CSS class name for the widget.
+open_meteo	tooltip	boolean	true	Whether to show a tooltip with the min and max temperatures.
+open_meteo	update_interval	integer	3600	The interval in seconds to update the weather data. Must be between 60 and 36000000.
+open_meteo	hide_decimal	boolean	false	Whether to hide the decimal part of the temperature.
+open_meteo	units	string	'metric'	The units for the weather data. Can be 'metric' or 'imperial'.
+open_meteo	forecast_days	integer	7	Number of days to fetch and display in the forecast popup. Must be between 1 and 14.
+open_meteo	icons	dict	See below	A dictionary of icons for different weather conditions.
+open_meteo	keybindings	list	[]	Optional hotkeys. See Keybindings.
+open_meteo	callbacks	dict	See below	Callbacks for mouse events on the weather widget.
+open_meteo	weather_card	dict	See below	Configuration for the weather card popup display.
+pomodoro	label	string	\uf252 {remaining}	The label format for displaying timer information.
+pomodoro	label_alt	string	{session}/{total_sessions} - {remaining}	Alternative label format that can be toggled.
+pomodoro	class_name	string	""	Additional CSS class name for the widget.
+pomodoro	work_duration	integer	25	The duration of work sessions in minutes.
+pomodoro	break_duration	integer	5	The duration of regular breaks in minutes.
+pomodoro	long_break_duration	integer	15	The duration of long breaks in minutes.
+pomodoro	long_break_interval	integer	4	Number of work sessions before a long break.
+pomodoro	auto_start_breaks	boolean	true	Automatically start break timer after work session ends.
+pomodoro	auto_start_work	boolean	true	Automatically start work timer after break ends.
+pomodoro	sound_notification	boolean	true	Play sound when a timer finishes.
+pomodoro	show_notification	boolean	true	Show Windows notification when a timer finishes.
+pomodoro	session_target	integer	0	Target number of sessions (0 means unlimited).
+pomodoro	hide_on_break	boolean	false	Hide the widget during break sessions.
+pomodoro	icons	dict	See below	Icons used for different timer states.
+pomodoro	keybindings	list	[]	Optional hotkeys. See Keybindings.
+pomodoro	callbacks	dict	See below	Configure widget interaction callbacks.
+pomodoro	menu	dict	See below	Configure the appearance and behavior of the timer menu.
+pomodoro	progress_bar	dict	See below	Progress bar settings.
+power_menu	label	string	"power"	The label for the power menu widget.
+power_menu	uptime	boolean	true	Whether to display the system uptime.
+power_menu	show_user	boolean	false	Whether to display the user profile info.
+power_menu	blur	boolean	false	Whether to blur the button background. (fullscreen mode only)
+power_menu	blur_background	boolean	true	Whether to blur the overlay background. (fullscreen mode only)
+power_menu	animation_duration	integer	200	The duration of the animation in milliseconds. Must be between 0 and 2000. (fullscreen mode only)
+power_menu	button_row	integer	3	The number of buttons in a row. Must be between 1 and 6. (fullscreen mode only)
+power_menu	menu_style	string	"fullscreen"	The menu display style: "fullscreen" for full-screen overlay or "popup" for compact popup anchored to the bar button.
+power_menu	popup	dict	See below	Popup appearance/position options. Only used when menu_style is "popup".
+power_menu	profile_image_size	integer	64	Profile avatar size in pixels. Must be between 16 and 256.
+power_menu	buttons	dict	Required	A dictionary defining the buttons and their properties. restart, shutdown and cancel are required.
+power_menu	keybindings	list	[]	Optional hotkeys. See Keybindings.
+power_menu	callbacks	dict	See below	Callbacks for mouse events on the widget.
+power_menu	blur	boolean	true	Whether to apply blur effect to the popup.
+power_menu	round_corners	boolean	true	Whether to round the popup corners.
+power_menu	round_corners_type	string	"normal"	Type of round corners ("normal" or "small").
+power_menu	border_color	string	"System"	Border color of the popup.
+power_menu	alignment	string	"right"	Popup alignment relative to the widget: "left", "right", or "center".
+power_menu	direction	string	"down"	Popup direction: "up" or "down".
+power_menu	offset_top	integer	6	Vertical offset in pixels.
+power_menu	offset_left	integer	0	Horizontal offset in pixels.
+power_plan	label	string	"\uf0e7 {active_plan}"	Main label template. Use {active_plan} to insert the active plan name.
+power_plan	label_alt	string	"\uf0e7 Power Plan"	Alternate label (e.g. an icon) shown when toggled via toggle_label.
+power_plan	class_name	string	""	Additional CSS class name for the widget.
+power_plan	class_map	dict	{}	Optional dictionary mapping localized/custom plan names or GUIDs to pure-ASCII CSS class names.
+power_plan	menu	dict	See below	Popup menu options.
+power_plan	keybindings	list	[]	Optional hotkeys. See Keybindings.
+power_plan	callbacks	dict	See below	Click handlers: on_left, on_middle, on_right.
+power_plan	blur	bool	true	Blur background behind the popup.
+power_plan	round_corners	bool	true	Enable rounded corners on the popup.
+power_plan	round_corners_type	string	"normal"	Rounding style: "small", "normal".
+power_plan	border_color	string	"system"	Border color can be None, system or Hex Color "#ff0000"
+power_plan	alignment	string	"right"	Horizontal alignment of the menu relative to the widget (e.g., left, right, center)
+power_plan	direction	string	"down"	Vertical opening direction: "up" or "down".
+power_plan	offset_top	int	6	Vertical offset in pixels.
+power_plan	offset_left	int	0	Horizontal offset in pixels.
+quick_launch	label	string	"\uf002"	The label/icon for the widget on the bar.
+quick_launch	search_placeholder	string	"Search applications..."	Placeholder text for the search field.
+quick_launch	remember_last_query	bool	false	When enabled, the popup remembers the last search query and displays its results when the widget is opened.
+quick_launch	max_results	int	50	Maximum number of results displayed (1-500).
+quick_launch	show_icons	bool	true	Show icons next to search results.
+quick_launch	icon_size	int	32	Size of result icons in pixels.
+quick_launch	home_page	bool	false	Show provider shortcut tiles when search is empty.
+quick_launch	compact_mode	bool	false	When enabled, the popup starts collapsed to just the search bar and only expands to show results when you start typing.
+quick_launch	compact_text	bool	false	When enabled, each result row is single-line: the description is shown inline on the right side instead of on a second line below the title.
+quick_launch	providers	dict	See below	Configuration for each search provider.
+quick_launch	popup	dict	See below	Popup window appearance settings.
+quick_launch	keybindings	list	[]	Global keybindings for toggling the popup.
+quick_launch	callbacks	dict	See below	Mouse event callbacks.
+quick_launch	width	int	720	Width of the popup window in pixels.
+quick_launch	height	int	480	Height of the popup window in pixels.
+quick_launch	blur	bool	true	Enable background blur effect (Windows 11).
+quick_launch	round_corners	bool	true	Enable rounded corners on the popup window.
+quick_launch	round_corners_type	string	"normal"	Corner rounding type ("normal" or "small").
+quick_launch	border_color	string	"System"	Border color of the popup ("System", HEX value, or "None").
+quick_launch	dark_mode	bool	true	Force dark mode colors for the popup (Windows 11).
+quick_launch	enabled	bool	true	Enable/disable the apps provider.
+quick_launch	prefix	string	"*"	Trigger prefix. "*" means included in default results.
+quick_launch	priority	int	0	Sort order when multiple providers share the same prefix. Lower values appear first.
+quick_launch	show_recent	bool	true	Show recently launched apps at the top.
+quick_launch	max_recent	int	10	Maximum number of recent apps to display.
+quick_launch	show_description	bool	true	Show a short description of the application.
+quick_launch	enabled	bool	false	Enable/disable the Binance provider.
+quick_launch	prefix	string	crypto	Trigger prefix. Use "*" to include in default results.
+quick_launch	priority	int	0	Sort order when multiple providers share the same prefix. Lower values appear first.
+quick_launch	pairs	list	["BTC/USDT"]	Default trading pairs to query when no specific pair is provided.(e.g. ["BTC/USDT", "ETH/USDT"])
+quick_launch	round	int	2	Decimal precision for formatted output.
+quick_launch	open_url	bool	false	Open the Binance trading page instead of only copying the result.
+quick_launch	domain	string	api-gcp.binance.com	Binance API domain.
+quick_launch	enabled	bool	false	Enable/disable the bookmarks provider.
+quick_launch	prefix	string	"*"	Trigger prefix. "*" means included in default results.
+quick_launch	priority	int	0	Sort order when multiple providers share the same prefix. Lower values appear first.
+quick_launch	browser	string	"all"	Browser to read bookmarks from ("all", "chrome", "edge", "brave", "firefox", "vivaldi", "zen").
+quick_launch	profile	string	"Default"	Chromium browser profile name (e.g., "Default", "Profile 1").
+quick_launch	enabled	bool	false	Enable/disable the calculator provider.
+quick_launch	prefix	string	"="	Trigger prefix. Use "*" to include in default results.
+quick_launch	priority	int	0	Sort order when multiple providers share the same prefix. Lower values appear first.
+quick_launch	enabled	bool	false	Enable/disable the clipboard history provider.
+quick_launch	prefix	string	"cb"	Trigger prefix. Use "*" to include in default results.
+quick_launch	priority	int	0	Sort order when multiple providers share the same prefix. Lower values appear first.
+quick_launch	max_items	int	30	Maximum number of clipboard history items to show.
+quick_launch	show_preview	bool	true	Show the preview panel with text content or image preview. Press Alt+P to toggle at runtime.
+quick_launch	enabled	bool	true	Enable/disable the color provider.
+quick_launch	prefix	string	"c:"	Trigger prefix. Use "*" to include in default results.
+quick_launch	priority	int	0	Sort order when multiple providers share the same prefix. Lower values appear first.
+quick_launch	enabled	bool	false	Enable/disable the currency provider.
+quick_launch	prefix	string	"$"	Trigger prefix. Use "*" to include in default results.
+quick_launch	priority	int	0	Sort order when multiple providers share the same prefix. Lower values appear first.
+quick_launch	enabled	bool	false	Enable/disable the Developer Tools provider.
+quick_launch	prefix	string	"dev"	Prefix to activate the provider.
+quick_launch	priority	int	0	Display priority (higher = shown first).
+quick_launch	enabled	bool	false	Enable/disable the emoji provider.
+quick_launch	prefix	string	":"	Trigger prefix. Use "*" to include in default results.
+quick_launch	priority	int	0	Sort order when multiple providers share the same prefix. Lower values appear first.
+quick_launch	enabled	bool	false	Enable/disable the file search provider.
+quick_launch	prefix	string	"/"	Trigger prefix. Use "*" to include in default results.
+quick_launch	priority	int	0	Sort order when multiple providers share the same prefix. Lower values appear first.
+quick_launch	backend	string	"auto"	Search backend: "auto", "everything", "index", or "disk".
+quick_launch	show_path	bool	true	Show the parent folder path and file size in the result description.
+quick_launch	show_preview	bool	false	Show the preview panel with file icon and metadata. Press Alt+P to toggle at runtime.
+quick_launch	enabled	bool	false	Enable/disable the GitHub Notifications provider.
+quick_launch	prefix	string	"gh"	Trigger prefix. Use "*" to include in default results.
+quick_launch	priority	int	0	Sort order when multiple providers share the same prefix. Lower values appear first.
+quick_launch	token	string	"env"	GitHub personal access token. Use "env" to read from the YASB_GITHUB_TOKEN environment variable, or paste the token directly.
+quick_launch	enabled	bool	false	Enable/disable the Hacker News provider.
+quick_launch	prefix	string	"hn"	Trigger prefix to activate the provider.
+quick_launch	priority	int	0	Sort order when multiple providers share the same prefix. Lower values appear first.
+quick_launch	cache_ttl	int	300	How long (in seconds) to cache feed results before fetching again.
+quick_launch	max_items	int	30	Maximum number of stories to fetch per topic (hnrss.org limit is 100).
+quick_launch	enabled	bool	false	Enable/disable the IP / Network Info provider.
+quick_launch	prefix	string	"ip"	Prefix to activate the provider.
+quick_launch	priority	int	0	Display priority (higher = shown first).
+quick_launch	enabled	bool	false	Enable/disable the kill process provider.
+quick_launch	prefix	string	"!"	Trigger prefix. Use "*" to include in default results.
+quick_launch	priority	int	0	Sort order when multiple providers share the same prefix. Lower values appear first.
+quick_launch	enabled	bool	false	Enable/disable the port viewer provider.
+quick_launch	prefix	string	"pv"	Trigger prefix.
+quick_launch	priority	int	0	Sort order when multiple providers share the same prefix. Lower values appear first.
+quick_launch	tcp_listening_only	bool	true	Only show LISTENING TCP entries by default.
+quick_launch	include_established	bool	false	Include non-LISTENING TCP entries (e.g. ESTABLISHED).
+quick_launch	enabled	bool	false	Enable/disable the settings provider.
+quick_launch	prefix	string	"@"	Trigger prefix. Use "*" to include in default results.
+quick_launch	priority	int	0	Sort order when multiple providers share the same prefix. Lower values appear first.
+quick_launch	enabled	bool	true	Enable/disable the snippets provider.
+quick_launch	prefix	string	";"	Trigger prefix. Use "*" to include in default results.
+quick_launch	priority	int	0	Sort order when multiple providers share the same prefix. Lower values appear first.
+quick_launch	type_delay	int	200	Delay in milliseconds before typing starts after the popup closes. Increase if the target window needs more time to regain focus.
+quick_launch	enabled	bool	false	Enable/disable the SSH provider.
+quick_launch	prefix	string	"ssh"	Trigger prefix. Use "*" to include in default results.
+quick_launch	priority	int	0	Sort order when multiple providers share the same prefix. Lower values appear first.
+quick_launch	ssh_config_path	string	""	Path to the SSH config file to read hosts from. Empty uses ~/.ssh/config.
+quick_launch	enabled	bool	false	Enable/disable the system commands provider.
+quick_launch	prefix	string	">"	Trigger prefix. Use "*" to include in default results.
+quick_launch	priority	int	0	Sort order when multiple providers share the same prefix. Lower values appear first.
+quick_launch	enabled	bool	false	Enable/disable the unit converter provider.
+quick_launch	prefix	string	"~"	Trigger prefix. Use "*" to include in default results.
+quick_launch	priority	int	0	Sort order when multiple providers share the same prefix. Lower values appear first.
+quick_launch	enabled	bool	false	Enable/disable the VSCode provider.
+quick_launch	prefix	string	"vsc"	Prefix to activate the provider.
+quick_launch	priority	int	0	Display priority (higher = shown first).
+quick_launch	state_storage_path	string	''	Absolute path to the folder containing editor data, examples are shown below.
+quick_launch	enabled	bool	false	Enable/disable the web search provider.
+quick_launch	prefix	string	"?"	Trigger prefix. Use "*" to include in default results.
+quick_launch	priority	int	0	Sort order when multiple providers share the same prefix. Lower values appear first.
+quick_launch	engine	string	"google"	Preferred (first) search engine. All other engines are shown below it.
+quick_launch	custom_engines	list[{engine: string, name: string, url: string, description: string, icon: string}]	[]	List of custom search engines that are not included in the defaults. The icon property should be a stringified SVG. A default icon will be provided if not set in your configuration.
+quick_launch	remove_engines	list[str]	[]	Default engines you want to remove from the list of results
+quick_launch	enabled	bool	false	Enable/disable the window switcher provider.
+quick_launch	prefix	string	"win"	Trigger prefix. Use "*" to include in default results.
+quick_launch	priority	int	0	Sort order when multiple providers share the same prefix. Lower values appear first.
+quick_launch	enabled	bool	false	Enable/disable the Windows Terminal provider.
+quick_launch	prefix	string	"wt"	Trigger prefix. Use "*" to include in default results.
+quick_launch	priority	int	0	Sort order when multiple providers share the same prefix. Lower values appear first.
+quick_launch	enabled	bool	false	Enable/disable the WSL provider.
+quick_launch	prefix	string	"wsl"	Trigger prefix. Use "*" to include in default results.
+quick_launch	priority	int	0	Sort order when multiple providers share the same prefix. Lower values appear first.
+quick_launch	show_online	bool	true	Show distributions available to install from the online catalog below installed ones.
+quick_launch	enabled	bool	false	Enable/disable the world clock provider.
+quick_launch	prefix	string	"tz"	Trigger prefix. Use "*" to include in default results.
+quick_launch	priority	int	0	Sort order when multiple providers share the same prefix. Lower values appear first.
+recycle_bin	label	string	{icon} {items_count} {items_size}	Format for displaying recycle bin information. Available variables: {icon}, {items_count}, {items_size}.
+recycle_bin	label_alt	string	{icon} {items_count} {items_size}	Alternative label format that can be toggled with left-click (or configured callback).
+recycle_bin	class_name	string	""	Additional CSS class name for the widget.
+recycle_bin	icons	dict	See below	Customize icons used for different recycle bin states.
+recycle_bin	tooltip	boolean	True	Whether to show the tooltip on hover.
+recycle_bin	show_confirmation	boolean	False	Show Windows confirmation dialog before emptying.
+recycle_bin	keybindings	list	[]	Optional hotkeys. See Keybindings.
+recycle_bin	callbacks	dict	See below	Configure widget interaction callbacks.
+server_monitor	label	string	'{icon}'	The format string for the widget.
+server_monitor	label_alt	string	'{online}/{offline} of {total}'	The alternative format string for the widget.
+server_monitor	update_interval	integer	300	The interval in seconds to update the widget. Must be between 10 and 36000.
+server_monitor	tooltip	boolean	true	Whether to show the tooltip.
+server_monitor	ssl_check	boolean	true	Whether to check SSL certificates.
+server_monitor	ssl_warning	integer	30	The number of days before expiration to show SSL warnings (1-365).
+server_monitor	ssl_verify	boolean	true	Whether to verify SSL certificates.
+server_monitor	desktop_notifications	dict	{'ssl': false, 'offline': false}	Desktop notification settings. Show desktop notifications for SSL warnings and offline servers.
+server_monitor	timeout	integer	5	The timeout in seconds for server checks. Must be between 1 and 30.
+server_monitor	servers	list	[]	A list of server entries, each with name and url.
+server_monitor	menu	dict	See below	Menu settings for the widget.
+server_monitor	icons	dict	See below	Icons for different server states and actions.
+server_monitor	keybindings	list	[]	Optional hotkeys. See Keybindings.
+server_monitor	callbacks	dict	See below	Callbacks for mouse events on the server monitor widget.
+systray	class_name	string	'systray'	The class name for the base widget.
+systray	label_collapsed	string	'▼'	Label used for the collapse button when unpinned container is hidden.
+systray	label_expanded	string	'▶'	Label used for the collapse button when unpinned container is shown.
+systray	label_position	string	'left'	The position of the button that collapses unpinned container. Can be "left" or "right".
+systray	icon_size	integer	16	The size of the icons in the systray. Can be any integer between 8 and 64.
+systray	pin_click_modifier	string	'alt'	The modifier key used to pin/unpin icons. Can be "ctrl", "alt" or "shift".
+systray	show_unpinned	boolean	true	Whether to show unpinned container on startup.
+systray	show_unpinned_button	boolean	true	Whether to show the collapse unpinned icons button.
+systray	show_in_popup	boolean	false	Show unpinned icons in a popup grid instead of inline in the bar.
+systray	icons_per_row	integer	5	Number of icon columns in the popup grid, 1-12 (only used when show_in_popup is true).
+systray	popup	dict	See below	Popup appearance settings (only used when show_in_popup is true).
+systray	show_battery	boolean	false	Whether to show battery icon (from the original systray).
+systray	show_volume	boolean	false	Whether to show volume icon (from the original systray).
+systray	show_network	boolean	false	Whether to show network icon (from the original systray).
+systray	hide_icons	list	[]	List of process names to hide from the systray (exact match, case-insensitive).
+systray	tooltip	boolean	true	Whether to show tooltips when hovering over systray icons.
+systray	use_hook	boolean	false	Whether to use the systray hook. Default is false. False will use legacy systray monitor, true will use the new systray hook.
+systray	blur	boolean	true	Apply blur/acrylic effect to the popup background.
+systray	round_corners	boolean	true	Round the corners of the popup window.
+systray	round_corners_type	string	'normal'	Round corner type. Can be "normal" or "small".
+systray	border_color	string	'System'	Border color for the popup window. Use "System" for the system color.
+systray	alignment	string	'right'	Popup alignment relative to the button. Can be "left", "right", or "center".
+systray	direction	string	'down'	Popup direction. Can be "up" or "down".
+systray	offset_top	integer	6	Vertical offset in pixels.
+systray	offset_left	integer	0	Horizontal offset in pixels.
+taskbar	icon_size	integer	16	The size of icons
+taskbar	show_only_visible	boolean	false	Whether to show only visible applications in the taskbar.
+taskbar	strict_filtering	boolean	true	Whether to enforce strict filtering of applications based on their properties.
+taskbar	ignore_apps	dict	processes:[], titles[], classes:[]	Ignore applications by process name, title, or class.
+taskbar	tooltip	boolean	False	Whether to show the tooltip on hover.
+taskbar	title_label	dict	See below	Title label configuration for displaying window titles.
+taskbar	monitor_exclusive	boolean	False	Whether the application should be exclusive to the monitor.
+taskbar	hide_empty	boolean	False	Whether to hide the taskbar widget when there are no applications to display.
+taskbar	callbacks	dict	See below	Callbacks for mouse events on the widget.
+taskbar	preview	dict	See below	Configuration for window preview thumbnails.
+taskbar	grouping	dict	{'enabled': False, 'show_count': True}	Combine all windows of the same app into a single button.
+taskbar	animation	dict	{'enabled': True, 'duration': 200}	Configuration for animations when switching between applications.
+taskbar	keybindings	list	[]	Optional hotkeys. See Keybindings.
+todo	label	string	\uf4a0 {count}/{completed}	Main label format. Use {count} for active (not completed) tasks, {completed} for completed tasks, {total} for all tasks.
+todo	label_alt	string	\uf4a0 Tasks: {count}	Alternative label format.
+todo	data_path	string	""	Custom path to JSON file for storing tasks. Leave empty to use default location (~/.config/yasb/todo.json). Supports ~ for home directory.
+todo	menu	dict	See below	Popup menu settings.
+todo	icons	dict	See below	Icons for add, delete, check, etc.
+todo	categories	dict	default, urgent, important, soon, today	Task categories and their labels.
+todo	keybindings	list	[]	Optional hotkeys. See Keybindings.
+todo	callbacks	dict	See below	Mouse event callbacks.
+traffic	label	string	'\ueb01 \ueab4 {download_speed} \	\ueab7 {upload_speed}' | The format string for the traffic widget. Displays download and upload speeds.
+traffic	label_alt	string	'\ueb01 \ueab4 {upload_speed} \	\ueab7 {download_speed}' | The alternative format string for the traffic widget. Displays upload and download speeds.
+traffic	class_name	string	""	Additional CSS class name for the widget.
+traffic	update_interval	integer	1000	The interval in milliseconds to update the traffic data.
+traffic	interface	string	auto	The network interface to monitor. If not specified, the widget will use the default interface.
+traffic	hide_if_offline	boolean	false	Hide the widget if the network interface is offline.
+traffic	max_label_length	integer	0	The maximum length of the label.
+traffic	max_label_length_align	string	'left'	The alignment of the label when it exceeds the maximum length. Can be left, center, or right.
+traffic	speed_unit	string	'bits'	The unit of speed to display. Can be bits or bytes.
+traffic	hide_decimal	boolean	False	Hide decimal in the label. If set to True, the label will not show decimal places in the speed values.
+traffic	speed_threshold	dict	{'min_upload': 1000, 'min_download': 1000}	Minimum speed threshold for upload and download in bits. If the speed is below this threshold, the widget will not display the speed values.
+traffic	callbacks	dict	See below	Callbacks for mouse events on the traffic widget.
+traffic	menu	dict	See below	Menu options for the widget.
+traffic	keybindings	list	[]	Optional hotkeys. See Keybindings.
+traffic	blur	bool	true	Blur background behind the popup.
+traffic	round_corners	bool	true	Enable rounded corners on the popup.
+traffic	round_corners_type	string	"normal"	Rounding style: "small", "normal".
+traffic	border_color	string	"system"	Border color can be None, system or Hex Color "#ff0000"
+traffic	alignment	string	"left"	Horizontal alignment of the menu relative to the widget (e.g., left, right, center)
+traffic	direction	string	"down"	Vertical opening direction: "up" or "down".
+traffic	offset_top	int	6	Vertical offset in pixels.
+traffic	offset_left	int	0	Horizontal offset in pixels.
+traffic	show_interface_name	bool	true	Show the name of the network interface in the menu.
+traffic	show_internet_info	bool	true	Show the internet connection information in the menu. Connected or disconnected status.
+update_check	enabled	boolean	false	Enable Windows Update checking.
+update_check	label	string	'{count}'	Format string for the widget label. {count} shows update count.
+update_check	tooltip	boolean	true	Whether to show the tooltip on hover.
+update_check	interval	integer	1440	Check interval in minutes (30 to 10080).
+update_check	exclude	list	[]	List of updates to exclude (matched against name).
+update_check	enabled	boolean	false	Enable Winget package update checking.
+update_check	label	string	'{count}'	Format string for the widget label. {count} shows update count.
+update_check	tooltip	boolean	true	Whether to show the tooltip on hover.
+update_check	interval	integer	240	Check interval in minutes (10 to 10080).
+update_check	exclude	list	[]	List of packages to exclude (matched against name and id).
+update_check	enabled	boolean	false	Enable Scoop package update checking.
+update_check	label	string	'{count}'	Format string for the widget label. {count} shows update count.
+update_check	tooltip	boolean	true	Whether to show the tooltip on hover.
+update_check	interval	integer	240	Check interval in minutes (10 to 10080).
+update_check	exclude	list	[]	List of packages to exclude (matched against name).
+vscode	label	string	'<span>\udb82\ude1e</span>'	The format string for the widget.
+vscode	label_alt	string	'<span>\udb82\ude1e</span> recents'	The alternative format string for the widget.
+vscode	menu_title	string	<span style='font-weight:bold'>VS code</span> recents	The title of the menu.
+vscode	icons	dict	{'folder': '\uf114', 'file': '\uf016', 'remote': ''}	The icons for folders, files, and remote sessions. Setting any icon to "" will hide it.
+vscode	truncate_to_root_dir	bool	false	Whether to truncate the path to the projects root directory.
+vscode	max_number_of_folders	int	30	The maximum number of folders to display in the menu.
+vscode	max_number_of_files	int	30	The maximum number of files to display in the menu.
+vscode	state_storage_path	string	''	Absolute path to the folder containing editor data, examples are shown below.
+vscode	modified_date_format	string	'Date modified: %Y-%m-%d %H:%M'	The format for the modified date of the files and folders.
+vscode	cli_command	string	'code'	The CLI command to execute when a workspace is clicked, doesn't need to contain folder name. For example, code, windsurf.
+vscode	menu	dict	See below	Menu settings for the widget.
+vscode	keybindings	list	[]	Optional hotkeys. See Keybindings.
+vscode	callbacks	dict	See below	Callbacks for mouse events on the widget.
+volume	label	string	'{icon} {level}'	The format string for the volume label. You can use {icon} for the volume icon and {level} for the volume percentage.
+volume	label_alt	string	'{icon} {level}'	The alternative format string for the volume label. Useful for displaying additional volume details.
+volume	class_name	string	""	Additional CSS class name for the widget.
+volume	scroll_step	int	2	The step size for volume adjustment when scrolling. The value is in percentage points (1-100).
+volume	invert_wheel	boolean	false	Whether to invert wheel scroll direction (useful on laptop trackpads)
+volume	slider_beep	boolean	true	Whether to play a sound when the volume slider is released.
+volume	mute_text	string	'mute'	Text used by {level} to indicate muted volume
+volume	tooltip	boolean	true	Whether to show the tooltip on hover.
+volume	icons	dict	See below	A dictionary of icons representing different volume levels. The icons are used based on the current volume percentage.
+volume	callbacks	dict	See below	Callbacks for mouse events on the volume widget.
+volume	audio_menu	dict	See below	Menu settings for the widget.
+volume	keybindings	list	[]	Optional hotkeys. See Keybindings.
+volume	progress_bar	dict	See below	Progress bar settings.
+wallpapers	label	string	"{icon}"	The format string for the wallpaper widget label.
+wallpapers	tooltip	boolean	true	Whether to show the tooltip on hover.
+wallpapers	update_interval	integer	60	The interval in seconds to update the wallpaper. Must be between 60 and 86400.
+wallpapers	change_automatically	boolean	false	Whether to automatically change the wallpaper.
+wallpapers	image_path	string/list	Required	The path(s) to the folder(s) containing images for the wallpaper. Can be a single string or a list of strings. This field is required.
+wallpapers	engine	object	{}	The wallpaper transition engine options.
+wallpapers	gallery	object	{}	The gallery options for the wallpaper widget.
+wallpapers	run_after	list	[]	A list of commands to run after the wallpaper is changed.
+wallpapers	keybindings	list	[]	Hotkeys that open the gallery without clicking the widget.
+wallpapers	callbacks	dict	See below	Dictionary of callbacks to run when the widget is clicked.
+weather	label	string	'{icon}'	The format string for the weather label. You can use placeholders like {temp}, {icon}, etc.
+weather	label_alt	string	'{temp}'	The alternative format string for the weather label. Useful for displaying additional weather details.
+weather	class_name	string	""	Additional CSS class name for the widget.
+weather	tooltip	boolean	true	Whether to show a tooltip with the min and max temperatures.
+weather	update_interval	integer	3600	The interval in seconds to update the weather data. Must be between 60 and 36000000.
+weather	hide_decimal	boolean	false	Whether to hide the decimal part of the temperature.
+weather	location	string	'0'	The location for which to fetch the weather data.
+weather	show_alerts	boolean	false	Whether to show weather alerts.
+weather	units	string	'metric'	The units for the weather data. Can be 'metric' or 'imperial'.
+weather	api_key	string	'0'	The API key for accessing the weather service.
+weather	icons	dict	See below	A dictionary of icons for different weather conditions.
+weather	callbacks	dict	See below	Callbacks for mouse events on the weather widget.
+weather	keybindings	list	[]	Optional hotkeys. See Keybindings.
+weather	weather_card	dict	See below	Configuration for the weather card popup display.
+whkd	label	string	"\uf11c"	The string for the label button.
+whkd	special_keys	list	[]	A list of special keys to be used as hotkeys.
+whkd	keybindings	list	[]	Optional hotkeys. See Keybindings.
+wifi	label	string	"{wifi_icon}"	The label format for the WiFi widget.
+wifi	label_alt	string	"{wifi_icon} {wifi_name}"	The alternative label format for the WiFi widget.
+wifi	update_interval	integer	1000	Update interval in milliseconds (0-60000).
+wifi	class_name	string	""	Additional CSS class name for the widget.
+wifi	wifi_icons	list	See below	Icons for different WiFi signal strengths.
+wifi	ethernet_label	string	"{wifi_icon}"	The label format during active Ethernet connection.
+wifi	ethernet_label_alt	string	"{wifi_icon} {ip_addr}"	The alternative label format during active Ethernet connection.
+wifi	ethernet_icon	string	"\ueba9"	The icon to indicate Ethernet connection.
+wifi	get_exact_wifi_strength	boolean	false	Whether to get the exact WiFi signal strength.
+wifi	hide_if_ethernet	boolean	false	Whether to hide the widget if an Ethernet connection is active.
+wifi	callbacks	dict	See below	Callbacks for mouse events on the widget.
+wifi	menu_config	dict	See below	Popup menu configuration.
+wifi	keybindings	list	[]	Optional hotkeys. See Keybindings.
+window_controls	class_name	string	""	Additional CSS class name for the widget.
+window_controls	show_app_name	boolean	false	Show the friendly application name (e.g., "Firefox", "Windows Terminal") as a label next to the buttons.
+window_controls	app_name_position	string	"right"	Position of the app name label relative to buttons. Valid values: left, right.
+window_controls	maximized_only	boolean	true	When true, widget only appears for maximized windows. When false, appears for any focused window.
+window_controls	buttons	list	["minimize", "maximize", "close"]	Ordered list of buttons to display. Valid values: minimize, maximize, close.
+window_controls	button_labels	dict	See below	Custom labels/icons for each button.
+window_controls	monitor_exclusive	boolean	true	Whether the widget should only respond to windows on the same monitor.
+window_controls	animation_duration	integer	120	The duration of the show/hide animation in milliseconds. Must be between 0 and 2000. Set to 0 to disable animation.
+windows_desktops	label_workspace_btn	string	'{index}'	The format string for workspace buttons.
+windows_desktops	label_workspace_active_btn	string	'{index}'	The format string for the active workspace button.
+windows_desktops	label_workspace_populated_btn	string	None	The format string for buttons of desktops that have windows open.
+windows_desktops	enable_scroll_switching	boolean	false	Switch desktops with the mouse wheel over the widget.
+windows_desktops	reverse_scroll_direction	boolean	false	Reverse the mouse wheel direction for switching desktops.
+windows_desktops	keybindings	list	[]	Optional hotkeys. See Keybindings.
+windows_desktops	callbacks	dict	See below	Callbacks for mouse events on workspace buttons.

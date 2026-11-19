@@ -1,0 +1,53 @@
+/* The bar's own monochrome: capsule colour and light text. Colours only; no font, size, spacing or layout rule is touched. */
+:root {
+    --yasb-accent: rgb(154, 154, 160);          --yasb-accent-rgb: 120, 120, 125;
+    --yasb-accent-dark1: rgb(92, 92, 98);       --yasb-accent-dark1-rgb: 92, 92, 98;
+    --yasb-accent-dark2: rgb(58, 58, 63);       --yasb-accent-dark2-rgb: 58, 58, 63;
+    --yasb-accent-dark3: rgb(241, 241, 241);    --yasb-accent-dark3-rgb: 241, 241, 241;   /* text and icons on the tiles */
+    --yasb-accent-light1: rgb(138, 138, 142);   --yasb-accent-light1-rgb: 138, 138, 142;  /* highlights on black popups */
+    --yasb-accent-light2: rgb(180, 180, 186);   --yasb-accent-light2-rgb: 180, 180, 186;
+    --yasb-accent-light3: rgb(255, 255, 255);   --yasb-accent-light3-rgb: 255, 255, 255;  /* text on the active tile */
+}
+
+/* the tiles: the capsule colour */
+.yasb-bar .home-widget,
+.yasb-bar .komorebi-workspaces,
+.yasb-bar .komorebi-active-layout,
+.yasb-bar .komorebi-control-widget,
+.yasb-bar .taskbar-widget .widget-container,
+.yasb-bar .systray,
+.yasb-bar .wallpapers-widget,
+.yasb-bar .clock-widget,
+.yasb-bar .power-menu-widget,
+.yasb-bar .whkd-widget,
+.yasb-bar .notes-widget,
+.yasb-bar .active-window-widget,
+.yasb-bar .cava-widget {
+    background-color: #141414;
+}
+
+/* the states inside a tile: the original dark overlays become light ones (same states, same order of strength) */
+.yasb-bar .komorebi-workspaces .ws-btn { background-color: rgba(255, 255, 255, 0.04); }
+.yasb-bar .komorebi-workspaces .ws-btn:hover { background-color: rgba(255, 255, 255, 0.08); }
+.yasb-bar .komorebi-workspaces .ws-btn.populated { background-color: rgba(255, 255, 255, 0.07); }
+.yasb-bar .komorebi-workspaces .ws-btn.populated:hover { background-color: rgba(255, 255, 255, 0.13); }
+.yasb-bar .komorebi-workspaces .ws-btn.active { background-color: #2c2c2c; }
+
+.yasb-bar .taskbar-widget .app-container.running { background-color: rgba(255, 255, 255, 0.04); }
+.yasb-bar .taskbar-widget .app-container:hover { background-color: rgba(255, 255, 255, 0.10); }
+.yasb-bar .taskbar-widget .app-container.foreground,
+.yasb-bar .taskbar-widget .app-container.foreground:hover { background-color: #262626; }
+.yasb-bar .taskbar-widget .app-container.flashing { background-color: #3a3a3f; }
+
+.yasb-bar .systray .button { background-color: rgba(255, 255, 255, 0.04); }
+.yasb-bar .systray .button:hover { background-color: rgba(255, 255, 255, 0.10); }
+
+/* hover colour: the original goes black, which would vanish on a dark tile */
+.yasb-bar .home-widget .icon:hover,
+.yasb-bar .komorebi-active-layout .label:hover,
+.yasb-bar .komorebi-control-widget .label:hover,
+.yasb-bar .wallpapers-widget .label:hover,
+.yasb-bar .clock-widget .label:hover,
+.yasb-bar .power-menu-widget .label:hover {
+    color: #ffffff;
+}

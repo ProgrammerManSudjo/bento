@@ -1,0 +1,46 @@
+{
+ "vars": {
+  "--lwt-accent-color": "t .07",
+  "--lwt-text-color": "l3",
+  "--toolbar-bgcolor": "t .08",
+  "--toolbar-color": "l3",
+  "--toolbar-field-background-color": "t .12",
+  "--toolbar-field-color": "l3",
+  "--toolbar-field-focus-background-color": "t .22",
+  "--tab-selected-bgcolor": "t .35",
+  "--tab-selected-textcolor": "l3",
+  "--arrowpanel-background": "t .11",
+  "--arrowpanel-color": "l3",
+  "--arrowpanel-border-color": "t .32",
+  "--sidebar-background-color": "t .07",
+  "--sidebar-text-color": "l3",
+  "--urlbar-box-bgcolor": "t .12",
+  "--urlbar-box-hover-bgcolor": "t .22",
+  "--zen-primary-color": "acc",
+  "--zen-colors-primary": "t .35",
+  "--zen-colors-primary-foreground": "l3",
+  "--zen-colors-secondary": "t .12",
+  "--zen-colors-tertiary": "t .07",
+  "--zen-colors-border": "t .32",
+  "--zen-main-browser-background": "t .07"
+ },
+ "icon_vars": {
+  "--toolbarbutton-icon-fill": "icon",
+  "--lwt-toolbarbutton-icon-fill": "icon",
+  "--toolbarbutton-icon-fill-attention": "l1",
+  "--lwt-toolbarbutton-icon-fill-attention": "l1",
+  "--identity-icon-color": "icon",
+  "--tab-icon-overlay-stroke": "t .08"
+ },
+ "content_vars": {
+  "--in-content-page-background": "t .05",
+  "--in-content-page-color": "l3",
+  "--in-content-box-background": "t .08",
+  "--in-content-box-border-color": "t .32",
+  "--in-content-accent-color": "l1",
+  "--in-content-primary-button-background": "t .45",
+  "--newtab-background-color": "t .05",
+  "--newtab-background-color-secondary": "t .08",
+  "--newtab-text-primary-color": "l3"
+ }
+}

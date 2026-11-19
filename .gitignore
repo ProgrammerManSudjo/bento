@@ -1,0 +1,8 @@
+target/
+*.backup-*
+*.bak
+*.log
+shot.png
+full.png
+dist/
+.DS_Store

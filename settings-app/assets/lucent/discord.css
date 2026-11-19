@@ -1,0 +1,45 @@
+/**
+ * @name yasb-colors
+ * @description Windows accent colour for midnight (written by YASB Settings, the Lucent theme)
+ * @author yasb-settings
+ * @version 1.4
+ */
+:root,
+body,
+.theme-dark,
+.theme-darker {
+{{variables}}
+}
+
+/* window controls. midnight's own --custom-window-controls setting is left as you have it:
+   off = Discord's own buttons (tinted below), on = midnight's three dots (coloured by the three variables below) */
+[class*="winButtons_"] {
+    --red-2: {{dot_close}} !important;
+    --yellow-2: {{dot_minimize}} !important;
+    --green-2: {{dot_maximize}} !important;
+}
+[class*="winButton_"], [class*="winButton_"] svg {
+    color: {{control_colour}} !important;
+}
+[class*="winButton_"]:hover, [class*="winButton_"]:hover svg {
+    color: {{control_hover}} !important;
+}
+/* the Solar Bold icon pack hides the three buttons' icons and draws its own in the status colours, which midnight turns dark */
+[class*="winButton_"]::before,
+[class*="winButton_"]:nth-of-type(3):hover::before {
+    background-color: {{control_colour}} !important;
+    width: {{control_size}} !important;
+    height: {{control_size}} !important;
+    transition: background-color .12s ease;
+}
+[class*="winButton_"]:hover::before {
+    background-color: {{control_hover}} !important;
+}
+
+/* video and clip player: only the seek bar is touched (the accent); the rest of the player is left to Discord and midnight */
+[class*="mediaBarProgress_"] {
+    background-color: {{seek_bar}} !important;
+}
+[class*="mediaBarGrabber_"] {
+    background-color: {{seek_grabber}} !important;
+}

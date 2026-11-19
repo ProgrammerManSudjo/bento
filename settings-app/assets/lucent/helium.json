@@ -1,0 +1,30 @@
+{
+ "colors": {
+  "frame": "#000000",
+  "frame_inactive": "#000000",
+  "frame_incognito": "#000000",
+  "frame_incognito_inactive": "#000000",
+  "toolbar": "#0d0d0d",
+  "tab_text": "#ffffff",
+  "tab_background_text": "gray 70",
+  "bookmark_text": "l2",
+  "toolbar_button_icon": "l1",
+  "omnibox_background": "#1a1a1a",
+  "omnibox_text": "#ffffff",
+  "button_background": "#0d0d0d",
+  "ntp_background": "#000000",
+  "ntp_text": "#ffffff",
+  "ntp_link": "l1",
+  "ntp_section": "#0d0d0d",
+  "ntp_header": "#000000"
+ },
+ "mode_black": {
+  "toolbar": "#000000",
+  "tab_text": "#ffffff",
+  "bookmark_text": "l2",
+  "toolbar_button_icon": "l1",
+  "omnibox_background": "address",
+  "omnibox_text": "#ffffff",
+  "button_background": "#0d0d0d"
+ }
+}
