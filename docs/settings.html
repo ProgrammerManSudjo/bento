@@ -9,16 +9,17 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230a0a0a'/%3E%3Ccircle cx='10' cy='10' r='3' fill='%23fff'/%3E%3Ccircle cx='22' cy='10' r='3' fill='%23fff' opacity='.4'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%23c9ab9b'/%3E%3Ccircle cx='10' cy='22' r='3' fill='%23fff' opacity='.4'/%3E%3Ccircle cx='22' cy='22' r='3' fill='%23fff'/%3E%3C/svg%3E">
 </head><body>
 <header class="top"><a class="brand" href="index.html"><i><b></b><b></b><b></b><b></b><b></b><b></b></i>BENTO</a>
-<nav><a href="install.html">Install</a><a href="lucent.html">Lucent</a><a href="credits.html">Credits</a><a href="https://github.com/ProgrammerManSudjo/bento">GitHub</a></nav></header>
-<div class="wrap"><aside class="side"><h4>Start</h4><a href="index.html">Overview</a><a href="install.html">Install</a><h4>Use</h4><a href="lucent.html">Lucent</a><a href="settings.html" class=on>Settings app</a><a href="shortcuts.html">Shortcuts</a><a href="game-mode.html">Game mode</a><h4>Extras</h4><a href="windhawk.html">Windhawk</a><a href="credits.html">Credits and licences</a></aside><main>
+<button class="sbtn" id="sb" type="button"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="7" cy="7" r="5"/><path d="M11 11l4 4"/></svg><span>Search the docs</span><kbd>Ctrl K</kbd></button>
+<nav><a href="install.html">Install</a><a href="lucent.html">Lucent</a><a href="faq.html">FAQ</a><a href="https://github.com/ProgrammerManSudjo/bento">GitHub</a></nav></header>
+<div class="wrap"><aside class="side"><h4>Start</h4><a href="index.html">Overview</a><a href="install.html">Install</a><a href="configuration.html">Configuration</a><h4>Use</h4><a href="lucent.html">Lucent</a><a href="settings.html" class=on>Settings app</a><a href="shortcuts.html">Shortcuts</a><a href="game-mode.html">Game mode</a><h4>Extras</h4><a href="windhawk.html">Windhawk</a><h4>Help</h4><a href="faq.html">FAQ</a><a href="contributing.html">Contributing</a><a href="credits.html">Credits and licences</a></aside><main><article>
 <img class="pb" src="assets/h-settings.svg" alt="Settings app"><h1 class="sr">Settings app</h1>
 <p class="lead">Arrange the bar, widgets, tiling and colours without editing a file. It edits your real config, so you can still change anything by hand.</p>
-<h2>How it behaves</h2>
+<h2 id="how-it-behaves">How it behaves</h2>
 <ul><li><b>Changes wait for Apply.</b> The Apply button in the bottom pill lights up when there is something to apply, and has a small cross to discard it.</li>
 <li><b>Search</b> (<code>Ctrl K</code>) finds any page, widget or option. Results show the page, a short description, and scroll to the setting.</li>
 <li><b>Every option has a description</b>, taken from YASB's own documentation.</li>
 <li><b>Sliders move in steps of 5</b>, and your files are written without losing comments or order.</li></ul>
-<h2>The pages</h2>
+<h2 id="the-pages">The pages</h2>
 <table><tr><th>Page</th><th>What it does</th></tr>
 <tr><td>Home</td><td>The switches you reach for: scroll hotkeys, komorebi, Lucent.</td></tr>
 <tr><td>Bar</td><td>Where the bar sits, its size, padding, which widgets go left, centre and right.</td></tr>
@@ -28,8 +29,11 @@
 <tr><td>Wallpaper</td><td>Pick a wallpaper and the lock screen. It waits for Apply.</td></tr>
 <tr><td>Lucent</td><td>The accent, softness, the per-program cards and the monochrome theme.</td></tr>
 <tr><td>About</td><td>Versions, sounds, and shortcuts to your config files.</td></tr></table>
-<h2>Files it edits</h2>
+<h2 id="files-it-edits">Files it edits</h2>
 <p>The About page opens each of them: the YASB <code>config.yaml</code> and <code>styles.css</code>, komorebi's <code>komorebi.json</code>, the Tacky Borders <code>config.yaml</code>, and the app's own <code>settings.txt</code> (in <code>%LOCALAPPDATA%\yasb-settings</code>).</p>
 
-<div class="foot">Bento is MIT licensed. komorebi, YASB and the other projects it builds on have their own licences: <a href="credits.html">credits and licences</a>.</div></main></div>
-<script src="assets/site.js"></script></body></html>
+<div class="pn"><a href="lucent.html"><small>Previous</small><b>Lucent</b></a><a class="nx" href="shortcuts.html"><small>Next</small><b>Shortcuts</b></a></div>
+<div class="foot">Bento is MIT licensed. komorebi, YASB and the other projects it builds on have their own licences: <a href="credits.html">credits and licences</a>.</div></article></main>
+<aside class="toc"><div class="tocin"><h4>On this page</h4><nav id="toc"></nav><h4>Project</h4><a class="ext" href="https://github.com/ProgrammerManSudjo/bento">GitHub repository</a><a class="ext" href="https://github.com/ProgrammerManSudjo/bento/releases/latest">Latest release</a><a class="ext" href="https://github.com/ProgrammerManSudjo/bento/issues">Report an issue</a></div></aside></div>
+<div class="sm" id="sm" hidden><div class="sbox"><input id="sq" placeholder="Search the docs" autocomplete="off" spellcheck="false"><div id="sr"></div></div></div>
+<script src="assets/search.js"></script><script src="assets/site.js"></script></body></html>

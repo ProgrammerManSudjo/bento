@@ -9,17 +9,18 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230a0a0a'/%3E%3Ccircle cx='10' cy='10' r='3' fill='%23fff'/%3E%3Ccircle cx='22' cy='10' r='3' fill='%23fff' opacity='.4'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%23c9ab9b'/%3E%3Ccircle cx='10' cy='22' r='3' fill='%23fff' opacity='.4'/%3E%3Ccircle cx='22' cy='22' r='3' fill='%23fff'/%3E%3C/svg%3E">
 </head><body>
 <header class="top"><a class="brand" href="index.html"><i><b></b><b></b><b></b><b></b><b></b><b></b></i>BENTO</a>
-<nav><a href="install.html">Install</a><a href="lucent.html">Lucent</a><a href="credits.html">Credits</a><a href="https://github.com/ProgrammerManSudjo/bento">GitHub</a></nav></header>
-<div class="wrap"><aside class="side"><h4>Start</h4><a href="index.html">Overview</a><a href="install.html" class=on>Install</a><h4>Use</h4><a href="lucent.html">Lucent</a><a href="settings.html">Settings app</a><a href="shortcuts.html">Shortcuts</a><a href="game-mode.html">Game mode</a><h4>Extras</h4><a href="windhawk.html">Windhawk</a><a href="credits.html">Credits and licences</a></aside><main>
+<button class="sbtn" id="sb" type="button"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="7" cy="7" r="5"/><path d="M11 11l4 4"/></svg><span>Search the docs</span><kbd>Ctrl K</kbd></button>
+<nav><a href="install.html">Install</a><a href="lucent.html">Lucent</a><a href="faq.html">FAQ</a><a href="https://github.com/ProgrammerManSudjo/bento">GitHub</a></nav></header>
+<div class="wrap"><aside class="side"><h4>Start</h4><a href="index.html">Overview</a><a href="install.html" class=on>Install</a><a href="configuration.html">Configuration</a><h4>Use</h4><a href="lucent.html">Lucent</a><a href="settings.html">Settings app</a><a href="shortcuts.html">Shortcuts</a><a href="game-mode.html">Game mode</a><h4>Extras</h4><a href="windhawk.html">Windhawk</a><h4>Help</h4><a href="faq.html">FAQ</a><a href="contributing.html">Contributing</a><a href="credits.html">Credits and licences</a></aside><main><article>
 <img class="pb" src="assets/h-install.svg" alt="Install"><h1 class="sr">Install</h1>
 <p class="lead">A fresh Windows 11 PC to a finished desktop in a few minutes. You choose how much of it you want.</p>
 
-<h2>Before you start</h2>
+<h2 id="before-you-start">Before you start</h2>
 <ul><li>Windows 11 (Windows 10 may work, but the taskbar parts are untested there).</li>
 <li>A normal PowerShell, <b>not</b> run as administrator. Scoop, which installs the programs, refuses to run elevated.</li>
 <li>An internet connection. Nothing is installed system-wide: everything goes into your user folder.</li></ul>
 
-<h2>Run it</h2>
+<h2 id="run-it">Run it</h2>
 <pre><code>irm https://raw.githubusercontent.com/ProgrammerManSudjo/bento/main/install.ps1 | iex</code></pre>
 <p>Or read it first and run it from a clone:</p>
 <pre><code>git clone https://github.com/ProgrammerManSudjo/bento
@@ -28,7 +29,7 @@ cd bento
 .\install.ps1                    # the menus
 .\install.ps1 -Preset Full -Yes  # no questions: the whole suite (Windhawk is skipped)</code></pre>
 
-<h2>The menus</h2>
+<h2 id="the-menus">The menus</h2>
 <p>First: <b>the whole suite</b>, <b>let me choose</b>, or <b>just the core</b>. Arrow keys move, Enter picks. With "let me choose" you get a checklist (Space switches an item, A selects all, N none).</p>
 <table><tr><th>Piece</th><th>What it is</th></tr>
 <tr><td>komorebi + whkd + AutoHotkey</td><td>Tiling, workspaces, shortcuts and the scroll hotkeys. Core.</td></tr>
@@ -42,10 +43,10 @@ cd bento
 <tr><td>Wallpapers</td><td>Six original dot-matrix wallpapers, copied to <code>Pictures\Bento</code>.</td></tr>
 <tr><td>Windhawk</td><td>Taskbar and window mods. A manual download: see below.</td></tr></table>
 
-<h2>Windhawk is the one manual step</h2>
+<h2 id="windhawk-is-the-one-manual-step">Windhawk is the one manual step</h2>
 <p>Windhawk changes the taskbar and windows, so it asks for administrator permission. The installer cannot do that for you, and it should not. It opens <a href="https://windhawk.net">windhawk.net</a>, shows the link, and waits. Install Windhawk, then press <code>y</code> in the installer. It checks that Windhawk is there and offers to install the <a href="windhawk.html">recommended mods</a> in one administrator prompt. Press <code>n</code> to skip all of it.</p>
 
-<h2>What it changes</h2>
+<h2 id="what-it-changes">What it changes</h2>
 <ul><li><b>Programs</b> through Scoop, in <code>~\scoop</code>. Scoop itself is installed if it is missing.</li>
 <li><b>Configuration</b> in <code>~\.config\yasb</code>, <code>~\.config\komorebi</code>, <code>~\.config\whkdrc</code> and <code>~\.config\tacky-borders</code>. If a file would be overwritten, the old one is kept next to it as <code>name.backup-&lt;time&gt;</code>.</li>
 <li><b>Two user environment variables</b>: <code>KOMOREBI_CONFIG_HOME</code> and <code>WHKD_CONFIG_HOME</code>, which tell komorebi and whkd where the config is. The YASB config is made for you from a template, with your own folder filled in.</li>
@@ -53,22 +54,25 @@ cd bento
 <li>Wallpapers in <code>Pictures\Bento</code> and the Rainmeter skin in <code>Documents\Rainmeter\Skins\YasbBento</code>, if you chose them.</li></ul>
 <div class="note"><b>Safe to run again.</b> Programs that are already installed are skipped, and unchanged files are left alone.</div>
 
-<h2>After it finishes</h2>
+<h2 id="after-it-finishes">After it finishes</h2>
 <ol><li>Open <b>Bento Settings</b> from the YASB home menu (the icon at the left of the bar).</li>
 <li>Go to <a href="lucent.html">Lucent</a>, switch the theme on, pick an accent and press <b>Apply now</b>.</li>
 <li>Pick a wallpaper on the Wallpaper page, or in Windows settings.</li></ol>
 
-<h2>Uninstall</h2>
+<h2 id="uninstall">Uninstall</h2>
 <pre><code>Unregister-ScheduledTask -TaskName &quot;Bento Startup&quot; -Confirm:$false
 scoop uninstall komorebi whkd yasb autohotkey tacky-borders rainmeter altsnap
 # your old files are next to the new ones as *.backup-&lt;time&gt;: copy them back if you want them</code></pre>
 
-<h2>Trouble</h2>
+<h2 id="trouble">Trouble</h2>
 <table><tr><th>If</th><th>Then</th></tr>
 <tr><td>The bar icons look like boxes</td><td>The Nerd Font did not install. Install JetBrainsMono Nerd Font from <a href="https://www.nerdfonts.com">nerdfonts.com</a> and restart YASB.</td></tr>
 <tr><td>"running scripts is disabled"</td><td>Run <code>Set-ExecutionPolicy -Scope CurrentUser RemoteSigned</code> once, then the installer again.</td></tr>
 <tr><td>Nothing started after install</td><td>Sign out and in. Anything that failed to start is logged in <code>%TEMP%\stagger-startup.log</code>.</td></tr>
 <tr><td>The settings app did not download</td><td>There may be no release yet. Build it from <code>settings-app</code> with <code>cargo build --release</code> and run the installer with <code>-SettingsExe path\to\exe</code>.</td></tr></table>
 
-<div class="foot">Bento is MIT licensed. komorebi, YASB and the other projects it builds on have their own licences: <a href="credits.html">credits and licences</a>.</div></main></div>
-<script src="assets/site.js"></script></body></html>
+<div class="pn"><a href="index.html"><small>Previous</small><b>Overview</b></a><a class="nx" href="configuration.html"><small>Next</small><b>Configuration</b></a></div>
+<div class="foot">Bento is MIT licensed. komorebi, YASB and the other projects it builds on have their own licences: <a href="credits.html">credits and licences</a>.</div></article></main>
+<aside class="toc"><div class="tocin"><h4>On this page</h4><nav id="toc"></nav><h4>Project</h4><a class="ext" href="https://github.com/ProgrammerManSudjo/bento">GitHub repository</a><a class="ext" href="https://github.com/ProgrammerManSudjo/bento/releases/latest">Latest release</a><a class="ext" href="https://github.com/ProgrammerManSudjo/bento/issues">Report an issue</a></div></aside></div>
+<div class="sm" id="sm" hidden><div class="sbox"><input id="sq" placeholder="Search the docs" autocomplete="off" spellcheck="false"><div id="sr"></div></div></div>
+<script src="assets/search.js"></script><script src="assets/site.js"></script></body></html>

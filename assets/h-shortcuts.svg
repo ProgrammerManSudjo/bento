@@ -351,137 +351,137 @@
 <circle class="g" cx="1022" cy="238" r="1.5" opacity="0.028"/>
 <circle class="g" cx="1050" cy="238" r="1.5" opacity="0.021"/>
 <text x="64" y="52" font-size="13" letter-spacing="5" fill="#c9ab9b">USE</text>
-<circle class="t" cx="76.0" cy="82.0" r="4.2"/>
-<circle class="t" cx="88.0" cy="82.0" r="4.2"/>
-<circle class="t" cx="100.0" cy="82.0" r="4.2"/>
-<circle class="t p" cx="112.0" cy="82.0" r="4.2" style="animation-delay:1.8s"/>
-<circle class="t" cx="64.0" cy="94.0" r="4.2"/>
-<circle class="t" cx="64.0" cy="106.0" r="4.2"/>
-<circle class="t" cx="76.0" cy="118.0" r="4.2"/>
-<circle class="t" cx="88.0" cy="118.0" r="4.2"/>
-<circle class="t" cx="100.0" cy="118.0" r="4.2"/>
-<circle class="t" cx="112.0" cy="130.0" r="4.2"/>
-<circle class="t" cx="112.0" cy="142.0" r="4.2"/>
-<circle class="t" cx="64.0" cy="154.0" r="4.2"/>
-<circle class="t" cx="76.0" cy="154.0" r="4.2"/>
-<circle class="t" cx="88.0" cy="154.0" r="4.2"/>
-<circle class="t p" cx="100.0" cy="154.0" r="4.2" style="animation-delay:0.0s"/>
-<circle class="t" cx="148.0" cy="82.0" r="4.2"/>
-<circle class="t" cx="196.0" cy="82.0" r="4.2"/>
-<circle class="t" cx="148.0" cy="94.0" r="4.2"/>
-<circle class="t" cx="196.0" cy="94.0" r="4.2"/>
-<circle class="t" cx="148.0" cy="106.0" r="4.2"/>
-<circle class="t" cx="196.0" cy="106.0" r="4.2"/>
-<circle class="t" cx="148.0" cy="118.0" r="4.2"/>
-<circle class="t" cx="160.0" cy="118.0" r="4.2"/>
-<circle class="t" cx="172.0" cy="118.0" r="4.2"/>
-<circle class="t" cx="184.0" cy="118.0" r="4.2"/>
-<circle class="t p" cx="196.0" cy="118.0" r="4.2" style="animation-delay:2.4s"/>
-<circle class="t" cx="148.0" cy="130.0" r="4.2"/>
-<circle class="a p" cx="196.0" cy="130.0" r="4.2" style="animation-delay:.4s"/>
-<circle class="t" cx="148.0" cy="142.0" r="4.2"/>
-<circle class="t" cx="196.0" cy="142.0" r="4.2"/>
-<circle class="t" cx="148.0" cy="154.0" r="4.2"/>
-<circle class="t" cx="196.0" cy="154.0" r="4.2"/>
-<circle class="t" cx="244.0" cy="82.0" r="4.2"/>
-<circle class="t" cx="256.0" cy="82.0" r="4.2"/>
-<circle class="t" cx="268.0" cy="82.0" r="4.2"/>
-<circle class="t" cx="232.0" cy="94.0" r="4.2"/>
-<circle class="t p" cx="280.0" cy="94.0" r="4.2" style="animation-delay:0.6s"/>
-<circle class="t" cx="232.0" cy="106.0" r="4.2"/>
-<circle class="t" cx="280.0" cy="106.0" r="4.2"/>
-<circle class="t" cx="232.0" cy="118.0" r="4.2"/>
-<circle class="t" cx="280.0" cy="118.0" r="4.2"/>
-<circle class="t" cx="232.0" cy="130.0" r="4.2"/>
-<circle class="t" cx="280.0" cy="130.0" r="4.2"/>
-<circle class="t" cx="232.0" cy="142.0" r="4.2"/>
-<circle class="t" cx="280.0" cy="142.0" r="4.2"/>
-<circle class="t" cx="244.0" cy="154.0" r="4.2"/>
-<circle class="t" cx="256.0" cy="154.0" r="4.2"/>
-<circle class="t p" cx="268.0" cy="154.0" r="4.2" style="animation-delay:3.0s"/>
-<circle class="t" cx="316.0" cy="82.0" r="4.2"/>
-<circle class="t" cx="328.0" cy="82.0" r="4.2"/>
-<circle class="t" cx="340.0" cy="82.0" r="4.2"/>
-<circle class="t" cx="352.0" cy="82.0" r="4.2"/>
-<circle class="t" cx="316.0" cy="94.0" r="4.2"/>
-<circle class="t" cx="364.0" cy="94.0" r="4.2"/>
-<circle class="t" cx="316.0" cy="106.0" r="4.2"/>
-<circle class="t" cx="364.0" cy="106.0" r="4.2"/>
-<circle class="t" cx="316.0" cy="118.0" r="4.2"/>
-<circle class="t" cx="328.0" cy="118.0" r="4.2"/>
-<circle class="t p" cx="340.0" cy="118.0" r="4.2" style="animation-delay:1.2s"/>
-<circle class="t" cx="352.0" cy="118.0" r="4.2"/>
-<circle class="t" cx="316.0" cy="130.0" r="4.2"/>
-<circle class="t" cx="340.0" cy="130.0" r="4.2"/>
-<circle class="t" cx="316.0" cy="142.0" r="4.2"/>
-<circle class="t" cx="352.0" cy="142.0" r="4.2"/>
-<circle class="t" cx="316.0" cy="154.0" r="4.2"/>
-<circle class="t" cx="364.0" cy="154.0" r="4.2"/>
-<circle class="t" cx="400.0" cy="82.0" r="4.2"/>
-<circle class="t" cx="412.0" cy="82.0" r="4.2"/>
-<circle class="t" cx="424.0" cy="82.0" r="4.2"/>
-<circle class="t p" cx="436.0" cy="82.0" r="4.2" style="animation-delay:3.6s"/>
-<circle class="t" cx="448.0" cy="82.0" r="4.2"/>
-<circle class="t" cx="424.0" cy="94.0" r="4.2"/>
-<circle class="t" cx="424.0" cy="106.0" r="4.2"/>
-<circle class="t" cx="424.0" cy="118.0" r="4.2"/>
-<circle class="t" cx="424.0" cy="130.0" r="4.2"/>
-<circle class="t" cx="424.0" cy="142.0" r="4.2"/>
-<circle class="t" cx="424.0" cy="154.0" r="4.2"/>
-<circle class="t" cx="496.0" cy="82.0" r="4.2"/>
-<circle class="t" cx="508.0" cy="82.0" r="4.2"/>
-<circle class="t" cx="520.0" cy="82.0" r="4.2"/>
-<circle class="t p" cx="484.0" cy="94.0" r="4.2" style="animation-delay:1.8s"/>
-<circle class="t" cx="532.0" cy="94.0" r="4.2"/>
-<circle class="t" cx="484.0" cy="106.0" r="4.2"/>
-<circle class="t" cx="484.0" cy="118.0" r="4.2"/>
-<circle class="t" cx="484.0" cy="130.0" r="4.2"/>
-<circle class="t" cx="484.0" cy="142.0" r="4.2"/>
-<circle class="t" cx="532.0" cy="142.0" r="4.2"/>
-<circle class="t" cx="496.0" cy="154.0" r="4.2"/>
-<circle class="t" cx="508.0" cy="154.0" r="4.2"/>
-<circle class="t" cx="520.0" cy="154.0" r="4.2"/>
-<circle class="t" cx="568.0" cy="82.0" r="4.2"/>
-<circle class="t p" cx="616.0" cy="82.0" r="4.2" style="animation-delay:0.0s"/>
-<circle class="t" cx="568.0" cy="94.0" r="4.2"/>
-<circle class="t" cx="616.0" cy="94.0" r="4.2"/>
-<circle class="t" cx="568.0" cy="106.0" r="4.2"/>
-<circle class="t" cx="616.0" cy="106.0" r="4.2"/>
-<circle class="t" cx="568.0" cy="118.0" r="4.2"/>
-<circle class="t" cx="616.0" cy="118.0" r="4.2"/>
-<circle class="t" cx="568.0" cy="130.0" r="4.2"/>
-<circle class="t" cx="616.0" cy="130.0" r="4.2"/>
-<circle class="t" cx="568.0" cy="142.0" r="4.2"/>
-<circle class="t" cx="616.0" cy="142.0" r="4.2"/>
-<circle class="t p" cx="580.0" cy="154.0" r="4.2" style="animation-delay:2.4s"/>
-<circle class="t" cx="592.0" cy="154.0" r="4.2"/>
-<circle class="t" cx="604.0" cy="154.0" r="4.2"/>
-<circle class="t" cx="652.0" cy="82.0" r="4.2"/>
-<circle class="t" cx="664.0" cy="82.0" r="4.2"/>
-<circle class="t" cx="676.0" cy="82.0" r="4.2"/>
-<circle class="t" cx="688.0" cy="82.0" r="4.2"/>
-<circle class="t" cx="700.0" cy="82.0" r="4.2"/>
-<circle class="t" cx="676.0" cy="94.0" r="4.2"/>
-<circle class="t" cx="676.0" cy="106.0" r="4.2"/>
-<circle class="t" cx="676.0" cy="118.0" r="4.2"/>
-<circle class="t p" cx="676.0" cy="130.0" r="4.2" style="animation-delay:0.6s"/>
-<circle class="t" cx="676.0" cy="142.0" r="4.2"/>
-<circle class="t" cx="676.0" cy="154.0" r="4.2"/>
-<circle class="t" cx="748.0" cy="82.0" r="4.2"/>
-<circle class="t" cx="760.0" cy="82.0" r="4.2"/>
-<circle class="t" cx="772.0" cy="82.0" r="4.2"/>
-<circle class="t" cx="784.0" cy="82.0" r="4.2"/>
-<circle class="t" cx="736.0" cy="94.0" r="4.2"/>
-<circle class="t" cx="736.0" cy="106.0" r="4.2"/>
-<circle class="t" cx="748.0" cy="118.0" r="4.2"/>
-<circle class="t" cx="760.0" cy="118.0" r="4.2"/>
-<circle class="t p" cx="772.0" cy="118.0" r="4.2" style="animation-delay:3.0s"/>
-<circle class="t" cx="784.0" cy="130.0" r="4.2"/>
-<circle class="t" cx="784.0" cy="142.0" r="4.2"/>
-<circle class="t" cx="736.0" cy="154.0" r="4.2"/>
-<circle class="t" cx="748.0" cy="154.0" r="4.2"/>
-<circle class="t" cx="760.0" cy="154.0" r="4.2"/>
-<circle class="t" cx="772.0" cy="154.0" r="4.2"/>
+<circle class="t" cx="76.0" cy="82.0" r="4.199999999999999"/>
+<circle class="t" cx="88.0" cy="82.0" r="4.199999999999999"/>
+<circle class="t" cx="100.0" cy="82.0" r="4.199999999999999"/>
+<circle class="t p" cx="112.0" cy="82.0" r="4.199999999999999" style="animation-delay:1.8s"/>
+<circle class="t" cx="64.0" cy="94.0" r="4.199999999999999"/>
+<circle class="t" cx="64.0" cy="106.0" r="4.199999999999999"/>
+<circle class="t" cx="76.0" cy="118.0" r="4.199999999999999"/>
+<circle class="t" cx="88.0" cy="118.0" r="4.199999999999999"/>
+<circle class="t" cx="100.0" cy="118.0" r="4.199999999999999"/>
+<circle class="t" cx="112.0" cy="130.0" r="4.199999999999999"/>
+<circle class="t" cx="112.0" cy="142.0" r="4.199999999999999"/>
+<circle class="t" cx="64.0" cy="154.0" r="4.199999999999999"/>
+<circle class="t" cx="76.0" cy="154.0" r="4.199999999999999"/>
+<circle class="t" cx="88.0" cy="154.0" r="4.199999999999999"/>
+<circle class="t p" cx="100.0" cy="154.0" r="4.199999999999999" style="animation-delay:0.0s"/>
+<circle class="t" cx="148.0" cy="82.0" r="4.199999999999999"/>
+<circle class="t" cx="196.0" cy="82.0" r="4.199999999999999"/>
+<circle class="t" cx="148.0" cy="94.0" r="4.199999999999999"/>
+<circle class="t" cx="196.0" cy="94.0" r="4.199999999999999"/>
+<circle class="t" cx="148.0" cy="106.0" r="4.199999999999999"/>
+<circle class="t" cx="196.0" cy="106.0" r="4.199999999999999"/>
+<circle class="t" cx="148.0" cy="118.0" r="4.199999999999999"/>
+<circle class="t" cx="160.0" cy="118.0" r="4.199999999999999"/>
+<circle class="t" cx="172.0" cy="118.0" r="4.199999999999999"/>
+<circle class="t" cx="184.0" cy="118.0" r="4.199999999999999"/>
+<circle class="t p" cx="196.0" cy="118.0" r="4.199999999999999" style="animation-delay:2.4s"/>
+<circle class="t" cx="148.0" cy="130.0" r="4.199999999999999"/>
+<circle class="a p" cx="196.0" cy="130.0" r="4.199999999999999" style="animation-delay:.4s"/>
+<circle class="t" cx="148.0" cy="142.0" r="4.199999999999999"/>
+<circle class="t" cx="196.0" cy="142.0" r="4.199999999999999"/>
+<circle class="t" cx="148.0" cy="154.0" r="4.199999999999999"/>
+<circle class="t" cx="196.0" cy="154.0" r="4.199999999999999"/>
+<circle class="t" cx="244.0" cy="82.0" r="4.199999999999999"/>
+<circle class="t" cx="256.0" cy="82.0" r="4.199999999999999"/>
+<circle class="t" cx="268.0" cy="82.0" r="4.199999999999999"/>
+<circle class="t" cx="232.0" cy="94.0" r="4.199999999999999"/>
+<circle class="t p" cx="280.0" cy="94.0" r="4.199999999999999" style="animation-delay:0.6s"/>
+<circle class="t" cx="232.0" cy="106.0" r="4.199999999999999"/>
+<circle class="t" cx="280.0" cy="106.0" r="4.199999999999999"/>
+<circle class="t" cx="232.0" cy="118.0" r="4.199999999999999"/>
+<circle class="t" cx="280.0" cy="118.0" r="4.199999999999999"/>
+<circle class="t" cx="232.0" cy="130.0" r="4.199999999999999"/>
+<circle class="t" cx="280.0" cy="130.0" r="4.199999999999999"/>
+<circle class="t" cx="232.0" cy="142.0" r="4.199999999999999"/>
+<circle class="t" cx="280.0" cy="142.0" r="4.199999999999999"/>
+<circle class="t" cx="244.0" cy="154.0" r="4.199999999999999"/>
+<circle class="t" cx="256.0" cy="154.0" r="4.199999999999999"/>
+<circle class="t p" cx="268.0" cy="154.0" r="4.199999999999999" style="animation-delay:3.0s"/>
+<circle class="t" cx="316.0" cy="82.0" r="4.199999999999999"/>
+<circle class="t" cx="328.0" cy="82.0" r="4.199999999999999"/>
+<circle class="t" cx="340.0" cy="82.0" r="4.199999999999999"/>
+<circle class="t" cx="352.0" cy="82.0" r="4.199999999999999"/>
+<circle class="t" cx="316.0" cy="94.0" r="4.199999999999999"/>
+<circle class="t" cx="364.0" cy="94.0" r="4.199999999999999"/>
+<circle class="t" cx="316.0" cy="106.0" r="4.199999999999999"/>
+<circle class="t" cx="364.0" cy="106.0" r="4.199999999999999"/>
+<circle class="t" cx="316.0" cy="118.0" r="4.199999999999999"/>
+<circle class="t" cx="328.0" cy="118.0" r="4.199999999999999"/>
+<circle class="t p" cx="340.0" cy="118.0" r="4.199999999999999" style="animation-delay:1.2s"/>
+<circle class="t" cx="352.0" cy="118.0" r="4.199999999999999"/>
+<circle class="t" cx="316.0" cy="130.0" r="4.199999999999999"/>
+<circle class="t" cx="340.0" cy="130.0" r="4.199999999999999"/>
+<circle class="t" cx="316.0" cy="142.0" r="4.199999999999999"/>
+<circle class="t" cx="352.0" cy="142.0" r="4.199999999999999"/>
+<circle class="t" cx="316.0" cy="154.0" r="4.199999999999999"/>
+<circle class="t" cx="364.0" cy="154.0" r="4.199999999999999"/>
+<circle class="t" cx="400.0" cy="82.0" r="4.199999999999999"/>
+<circle class="t" cx="412.0" cy="82.0" r="4.199999999999999"/>
+<circle class="t" cx="424.0" cy="82.0" r="4.199999999999999"/>
+<circle class="t p" cx="436.0" cy="82.0" r="4.199999999999999" style="animation-delay:3.6s"/>
+<circle class="t" cx="448.0" cy="82.0" r="4.199999999999999"/>
+<circle class="t" cx="424.0" cy="94.0" r="4.199999999999999"/>
+<circle class="t" cx="424.0" cy="106.0" r="4.199999999999999"/>
+<circle class="t" cx="424.0" cy="118.0" r="4.199999999999999"/>
+<circle class="t" cx="424.0" cy="130.0" r="4.199999999999999"/>
+<circle class="t" cx="424.0" cy="142.0" r="4.199999999999999"/>
+<circle class="t" cx="424.0" cy="154.0" r="4.199999999999999"/>
+<circle class="t" cx="496.0" cy="82.0" r="4.199999999999999"/>
+<circle class="t" cx="508.0" cy="82.0" r="4.199999999999999"/>
+<circle class="t" cx="520.0" cy="82.0" r="4.199999999999999"/>
+<circle class="t p" cx="484.0" cy="94.0" r="4.199999999999999" style="animation-delay:1.8s"/>
+<circle class="t" cx="532.0" cy="94.0" r="4.199999999999999"/>
+<circle class="t" cx="484.0" cy="106.0" r="4.199999999999999"/>
+<circle class="t" cx="484.0" cy="118.0" r="4.199999999999999"/>
+<circle class="t" cx="484.0" cy="130.0" r="4.199999999999999"/>
+<circle class="t" cx="484.0" cy="142.0" r="4.199999999999999"/>
+<circle class="t" cx="532.0" cy="142.0" r="4.199999999999999"/>
+<circle class="t" cx="496.0" cy="154.0" r="4.199999999999999"/>
+<circle class="t" cx="508.0" cy="154.0" r="4.199999999999999"/>
+<circle class="t" cx="520.0" cy="154.0" r="4.199999999999999"/>
+<circle class="t" cx="568.0" cy="82.0" r="4.199999999999999"/>
+<circle class="t p" cx="616.0" cy="82.0" r="4.199999999999999" style="animation-delay:0.0s"/>
+<circle class="t" cx="568.0" cy="94.0" r="4.199999999999999"/>
+<circle class="t" cx="616.0" cy="94.0" r="4.199999999999999"/>
+<circle class="t" cx="568.0" cy="106.0" r="4.199999999999999"/>
+<circle class="t" cx="616.0" cy="106.0" r="4.199999999999999"/>
+<circle class="t" cx="568.0" cy="118.0" r="4.199999999999999"/>
+<circle class="t" cx="616.0" cy="118.0" r="4.199999999999999"/>
+<circle class="t" cx="568.0" cy="130.0" r="4.199999999999999"/>
+<circle class="t" cx="616.0" cy="130.0" r="4.199999999999999"/>
+<circle class="t" cx="568.0" cy="142.0" r="4.199999999999999"/>
+<circle class="t" cx="616.0" cy="142.0" r="4.199999999999999"/>
+<circle class="t p" cx="580.0" cy="154.0" r="4.199999999999999" style="animation-delay:2.4s"/>
+<circle class="t" cx="592.0" cy="154.0" r="4.199999999999999"/>
+<circle class="t" cx="604.0" cy="154.0" r="4.199999999999999"/>
+<circle class="t" cx="652.0" cy="82.0" r="4.199999999999999"/>
+<circle class="t" cx="664.0" cy="82.0" r="4.199999999999999"/>
+<circle class="t" cx="676.0" cy="82.0" r="4.199999999999999"/>
+<circle class="t" cx="688.0" cy="82.0" r="4.199999999999999"/>
+<circle class="t" cx="700.0" cy="82.0" r="4.199999999999999"/>
+<circle class="t" cx="676.0" cy="94.0" r="4.199999999999999"/>
+<circle class="t" cx="676.0" cy="106.0" r="4.199999999999999"/>
+<circle class="t" cx="676.0" cy="118.0" r="4.199999999999999"/>
+<circle class="t p" cx="676.0" cy="130.0" r="4.199999999999999" style="animation-delay:0.6s"/>
+<circle class="t" cx="676.0" cy="142.0" r="4.199999999999999"/>
+<circle class="t" cx="676.0" cy="154.0" r="4.199999999999999"/>
+<circle class="t" cx="748.0" cy="82.0" r="4.199999999999999"/>
+<circle class="t" cx="760.0" cy="82.0" r="4.199999999999999"/>
+<circle class="t" cx="772.0" cy="82.0" r="4.199999999999999"/>
+<circle class="t" cx="784.0" cy="82.0" r="4.199999999999999"/>
+<circle class="t" cx="736.0" cy="94.0" r="4.199999999999999"/>
+<circle class="t" cx="736.0" cy="106.0" r="4.199999999999999"/>
+<circle class="t" cx="748.0" cy="118.0" r="4.199999999999999"/>
+<circle class="t" cx="760.0" cy="118.0" r="4.199999999999999"/>
+<circle class="t p" cx="772.0" cy="118.0" r="4.199999999999999" style="animation-delay:3.0s"/>
+<circle class="t" cx="784.0" cy="130.0" r="4.199999999999999"/>
+<circle class="t" cx="784.0" cy="142.0" r="4.199999999999999"/>
+<circle class="t" cx="736.0" cy="154.0" r="4.199999999999999"/>
+<circle class="t" cx="748.0" cy="154.0" r="4.199999999999999"/>
+<circle class="t" cx="760.0" cy="154.0" r="4.199999999999999"/>
+<circle class="t" cx="772.0" cy="154.0" r="4.199999999999999"/>
 <text x="64" y="206" font-size="16" letter-spacing="2" fill="#8a8a8a">Keyboard and scroll, all of it yours to change.</text>
 <rect x="868" y="56" width="100" height="64" rx="14" fill="#0e0e0e" stroke="#3a3a3a" stroke-width="1.5" class=""/>
 <text x="918.0" y="95" text-anchor="middle" font-size="17" letter-spacing="3" fill="#cfcfcf">ALT</text>

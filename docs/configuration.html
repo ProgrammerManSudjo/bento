@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Configuration - Bento</title><meta name="description" content="Where every Bento file lives, what it controls, and how to reload it after a change.">
+<meta property="og:title" content="Configuration - Bento"><meta property="og:description" content="Where every Bento file lives, what it controls, and how to reload it after a change.">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230a0a0a'/%3E%3Ccircle cx='10' cy='10' r='3' fill='%23fff'/%3E%3Ccircle cx='22' cy='10' r='3' fill='%23fff' opacity='.4'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%23c9ab9b'/%3E%3Ccircle cx='10' cy='22' r='3' fill='%23fff' opacity='.4'/%3E%3Ccircle cx='22' cy='22' r='3' fill='%23fff'/%3E%3C/svg%3E">
+</head><body>
+<header class="top"><a class="brand" href="index.html"><i><b></b><b></b><b></b><b></b><b></b><b></b></i>BENTO</a>
+<button class="sbtn" id="sb" type="button"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="7" cy="7" r="5"/><path d="M11 11l4 4"/></svg><span>Search the docs</span><kbd>Ctrl K</kbd></button>
+<nav><a href="install.html">Install</a><a href="lucent.html">Lucent</a><a href="faq.html">FAQ</a><a href="https://github.com/ProgrammerManSudjo/bento">GitHub</a></nav></header>
+<div class="wrap"><aside class="side"><h4>Start</h4><a href="index.html">Overview</a><a href="install.html">Install</a><a href="configuration.html" class=on>Configuration</a><h4>Use</h4><a href="lucent.html">Lucent</a><a href="settings.html">Settings app</a><a href="shortcuts.html">Shortcuts</a><a href="game-mode.html">Game mode</a><h4>Extras</h4><a href="windhawk.html">Windhawk</a><h4>Help</h4><a href="faq.html">FAQ</a><a href="contributing.html">Contributing</a><a href="credits.html">Credits and licences</a></aside><main><article>
+<img class="pb" src="assets/h-config.svg" alt="Configuration"><h1 class="sr">Configuration</h1>
+<p class="lead">Everything Bento sets up is a plain file in your user folder. The settings app edits them for you, and you can edit them yourself at any time.</p>
+
+<div class="facts"><div><small>Bar</small><b>~\.config\yasb</b></div><div><small>Tiling</small><b>~\.config\komorebi</b></div><div><small>Hotkeys</small><b>~\.config\whkdrc</b></div><div><small>Borders</small><b>~\.config\tacky-borders</b></div></div>
+
+<h2 id="where-the-files-are">Where the files are</h2>
+<table><tr><th>File</th><th>What it controls</th></tr>
+<tr><td><code>yasb\config.yaml</code></td><td>The bar: its position and size, which widgets sit left, centre and right, and each widget's options. Made by the installer from a template with your own folder filled in.</td></tr>
+<tr><td><code>yasb\styles.css</code></td><td>The bar's look: capsules, colours, spacing, fonts.</td></tr>
+<tr><td><code>yasb\yasb_colors.css</code></td><td>Your Windows accent colour, written by YASB. Lucent reads it. Do not edit by hand.</td></tr>
+<tr><td><code>yasb\themes\</code></td><td>The monochrome palette and Lucent's generated theme files.</td></tr>
+<tr><td><code>komorebi\komorebi.json</code></td><td>Monitors, workspaces, gaps, borders, animation and layout.</td></tr>
+<tr><td><code>komorebi\applications.json</code></td><td>Per-application rules: which windows float, which are ignored, which get a special border.</td></tr>
+<tr><td><code>komorebi\komorebi-scroll.ahk</code></td><td>The scroll hotkeys, the tray icon and the game mode watcher.</td></tr>
+<tr><td><code>komorebi\game-mode.ps1</code></td><td>The one-line switch other tools call to turn <a href="game-mode.html">game mode</a> on or off.</td></tr>
+<tr><td><code>whkdrc</code></td><td>Every keyboard shortcut. See <a href="shortcuts.html">Shortcuts</a>.</td></tr>
+<tr><td><code>tacky-borders\config.yaml</code></td><td>Border colours, thickness, animation and effects.</td></tr>
+<tr><td><code>%LOCALAPPDATA%\yasb-settings\settings.txt</code></td><td>The settings app's own remembered choices: Lucent, per-program accents, monochrome tones.</td></tr></table>
+
+<h2 id="environment-variables">Environment variables</h2>
+<p>The installer sets two user variables so komorebi and whkd find their files. They are the only environment change Bento makes.</p>
+<table><tr><th>Variable</th><th>Points to</th></tr>
+<tr><td><code>KOMOREBI_CONFIG_HOME</code></td><td>The folder with <code>komorebi.json</code> and <code>applications.json</code>.</td></tr>
+<tr><td><code>WHKD_CONFIG_HOME</code></td><td>The folder holding <code>whkdrc</code>.</td></tr></table>
+
+<h2 id="reloading-after-a-change">Reloading after a change</h2>
+<table><tr><th>You changed</th><th>Do this</th></tr>
+<tr><td>YASB config or styles</td><td>Nothing: YASB reloads when the file is saved. If it ever does not, run <code>yasbc reload</code>.</td></tr>
+<tr><td><code>komorebi.json</code></td><td><code>komorebic reload-configuration</code>, or Alt + Shift + R.</td></tr>
+<tr><td><code>applications.json</code></td><td><code>komorebic reload-configuration</code> does not re-read this file. Use <code>komorebic replace-configuration</code> with the path to <code>komorebi.json</code> instead.</td></tr>
+<tr><td><code>whkdrc</code></td><td>Restart whkd, or stop and start komorebi with whkd.</td></tr>
+<tr><td>Tacky Borders config</td><td>Restart Tacky Borders. The settings app offers to do it.</td></tr></table>
+
+<h2 id="useful-commands">Useful commands</h2>
+<pre><code>yasbc toggle-bar        # show or hide the bar
+yasbc reload            # re-read the YASB config
+komorebic stop          # stop the tiling manager (windows are handed back)
+komorebic start --whkd  # start it again, with the hotkey daemon</code></pre>
+
+<h2 id="monitors">Monitors</h2>
+<p>The bar template uses <code>screens: ["*"]</code>, which puts a bar on every monitor. To use one monitor only, replace the star with its name (YASB lists the names in its log). komorebi's workspaces are defined per monitor in <code>komorebi.json</code>, in the order komorebi reports them.</p>
+
+<h2 id="start-with-windows">Start with Windows</h2>
+<p>A scheduled task named <b>Bento Startup</b> runs <code>stagger-startup.ps1</code> at sign-in. It starts komorebi, whkd, the scroll script, YASB, Tacky Borders and Rainmeter in a fixed order with short pauses, so none of them races the others. Anything that fails to start is written to <code>%TEMP%\stagger-startup.log</code>.</p>
+
+<h2 id="backups">Backups</h2>
+<p>When the installer would replace a file that already exists, the old one is kept next to it as <code>name.backup-&lt;time&gt;</code>. Delete them whenever you are happy.</p>
+
+<div class="pn"><a href="install.html"><small>Previous</small><b>Install</b></a><a class="nx" href="lucent.html"><small>Next</small><b>Lucent</b></a></div>
+<div class="foot">Bento is MIT licensed. komorebi, YASB and the other projects it builds on have their own licences: <a href="credits.html">credits and licences</a>.</div></article></main>
+<aside class="toc"><div class="tocin"><h4>On this page</h4><nav id="toc"></nav><h4>Project</h4><a class="ext" href="https://github.com/ProgrammerManSudjo/bento">GitHub repository</a><a class="ext" href="https://github.com/ProgrammerManSudjo/bento/releases/latest">Latest release</a><a class="ext" href="https://github.com/ProgrammerManSudjo/bento/issues">Report an issue</a></div></aside></div>
+<div class="sm" id="sm" hidden><div class="sbox"><input id="sq" placeholder="Search the docs" autocomplete="off" spellcheck="false"><div id="sr"></div></div></div>
+<script src="assets/search.js"></script><script src="assets/site.js"></script></body></html>
